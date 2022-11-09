@@ -1,0 +1,119 @@
+.site-footer {
+  padding: 0;
+  &__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5rem 3rem;
+    @include mq (md) {
+      padding: 7rem 0;
+    }
+    .region {
+      &-footer-fourth {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+        width: 100%;
+        @include mq (md) {
+          width: 100%;
+          max-width: 80%;
+        }
+        @include mq (xlg) {
+          max-width: 160rem;
+        }
+        .navbar-brand {
+          position: relative;
+          @include mq (md) {
+            width: 30%;
+          }
+          &::before {
+            @include pseudo();
+            background-image: url('../assets/images/bg/logo-siembraco-green.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 100%;
+          }
+          img {
+            visibility: hidden;
+            position: relative;
+          }
+        }
+        .menu--footer {
+          @include mq (md) {
+            width: 60%;
+          }
+          .nav {
+            display: flex;
+            width: 100%;
+            margin: 4rem 0 0;
+            @include mq (md) {
+              margin: 0;
+              flex-direction: row;
+            }
+            &-item {
+              margin: auto;
+              @include mq (md) {
+                margin: initial;
+                width: 25%;
+              }
+            }
+            &-link {
+              color: $green;
+              font-family: $FranklinGothicATF;
+              font-size: 1.3rem;
+              font-weight: 500;
+              text-transform: uppercase;
+              &.active {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__bottom {
+    background-color: $green;
+    border-top: 0;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 7rem;
+    .region {
+      margin: 0;
+      padding: 0;
+      p {
+        color: $white;
+      }
+      &-footer-fifth {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        width: 85%;
+        @include mq (md) {
+          width: 100%;
+          max-width: 80%;
+        }
+        @include mq (xlg) {
+          max-width: 160rem;
+        }
+        .block-block-content,
+        .block-menu {
+          width: max-content;
+          @include mq (md) {
+            width: 50%;
+          }
+        }
+        .block-menu {
+          display: flex;
+          justify-content: end;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

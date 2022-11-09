@@ -1,0 +1,82 @@
+.path-checkout {
+  .checkout-pane-review {
+    padding: 0 2rem;
+    legend {
+      color: $orange;
+      font-size: 1.6rem;
+      font-weight: 600;
+      text-align: left;
+    }
+  }
+  .layout-checkout-form {
+    max-width: 100rem;
+    margin: 0 auto;
+    h3 {
+      color: $orange;
+      font-size: 1.6rem;
+      font-weight: 600;
+      text-align: left;
+    }
+  }
+  .checkout-pane-payment-information {
+    padding: 2rem;
+    @include mq (md) {
+      padding: 0 6rem;  
+    }
+    legend {
+      color: $orange;
+      font-size: 1.6rem;
+      font-weight: 600;
+      text-align: left;
+    }
+    .fieldset-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      .address-container-inline {
+        display: flex;
+        justify-content: space-around;
+        align-content: flex-start;
+        align-items: center;
+        .js-form-item {
+          padding: 0 1rem 0 0;
+        }
+      }
+      .form-item-payment-information-billing-information-address-0-address-address-line2 {
+        display: none;
+      }
+      .form-item-payment-information-billing-information-address-0-address-locality {
+        flex: 1 0 33%;
+      }
+      .form-item-payment-information-billing-information-address-0-address-administrative-area {
+        flex: 1 0 33%;
+      }
+      .form-item-payment-information-billing-information-address-0-address-postal-code {
+        flex: 1 0 33%;
+      }
+    }
+  }
+  .link--previous {
+    border-color: transparent;
+    border-radius: 1.5rem;
+    color: #dff2eb;
+    font-family: $BCNovaticaCYR;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    margin: 2rem 0 0 1rem;
+    padding: 0.8rem 1.8rem;
+    text-transform: uppercase;
+    background-color: #dff2eb;
+    border-color: transparent;
+    border: 0.1rem solid #177755;
+    color: #177755;
+    text-decoration: none;
+  }
+  span,
+  div {
+    font-family: $BCNovaticaCYR;
+  }
+}

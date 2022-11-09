@@ -1,0 +1,110 @@
+body {
+  &.path-product {
+    .product__wrapper  {
+      &--three {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 1s;
+        transform: translateY(30rem);
+        &.animation-siembraco {
+          transform: translateX(0);
+        }
+        @include mq (md) {
+          flex-direction: row;
+        }
+        .product__wrapper {
+          &--left,
+          &--right {
+            display: block;
+            margin: 0 0 2rem;
+            width: 100%;
+            @include mq (md) {
+              margin: initial;
+              width: 50%;
+            }
+          }
+          &--left {
+            .field {
+              &--name-field-galeria {
+                margin: auto;
+                width: 95%;
+                @include mq (sm) {
+                  margin: auto;
+                  width: 25rem;
+                }
+                @include mq (lg) {
+                  margin: initial;
+                  width: 50rem;
+                }
+                img {
+                  width: 100%;
+                  height: auto;
+                }
+                .flickity-viewport {
+                  height: 33.3rem !important;
+                }
+              }
+            }
+          }
+          &--right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            .field {
+              &--name-field-tabla {
+                background-color: $green-light;
+                border: .1rem solid $green;
+                border-radius: 1.2rem;
+                padding: 1.5rem;
+                width: 100%;
+                @include mq (md) {
+                  width: 45rem;
+                }
+              }
+            }
+            .paragraph {
+              &--type--especificacion {
+                display: flex;
+                flex-direction: column;
+                font-family: $FranklinGothicATF;
+                font-size: 1.3rem;
+                @include mq (md) {
+                  flex-direction: row;
+                }
+                .field {
+                  &--name-field-key {
+                    font-weight: 500;
+                    position: relative;
+                      @include mq (md) {
+                      width: 70%;
+                    }
+                    &:after {
+                      @include mq (md) {
+                        @include pseudo();
+                        background-color: $green;
+                        width: .1rem;
+                        height: 100%;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        margin: auto;
+                      }
+                    }
+                  }
+                  &--name-field-descripcion-table {
+                      @include mq (md) {
+                      padding: 0 0 0 3rem;
+                      width: 30%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}    

@@ -1,0 +1,40 @@
+body {
+  &.farmers {
+    overflow-x: hidden;
+    .node__content {
+      margin: 0;
+      background-image: url("../assets/images/bg/trama-fondo.jpg");
+      background-position: bottom;
+      background-repeat: repeat;
+      background-size: 127px;
+      padding: 0 ;
+      @include mq(md) {
+      }
+      .layout {
+        &--onecol {
+          margin: auto;
+          max-width: 200rem;
+          position: relative;
+          &:nth-child(2) {
+            .block-inline-blockblock-video {
+              display: flex;
+              justify-content: center;
+              padding: 0 7% 7%;
+              @include mq(md) {
+                padding: 5% 7%;
+              }
+              .field {
+                &--type-entity-reference {
+                  margin: 0;
+                }
+                &--type-image {
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

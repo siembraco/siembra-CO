@@ -1,0 +1,32 @@
+body {
+  &.path-frontpage {
+    overflow-x: hidden;
+    .node__content {
+      margin: 0;
+      background-image: url("../assets/images/bg/trama-fondo.jpg");
+      background-position: bottom;
+      background-repeat: repeat;
+      background-size: 100px;
+      padding: 0;
+      @include mq(md) {
+        background-size: 127px;
+      }
+      .layout {
+        &--onecol {
+          margin: auto;
+          max-width: 200rem;
+          position: relative;
+          &:nth-child(2) {
+            @include mq(md) {
+              background-size: contain;
+              padding: 30rem 0 5rem;
+            }
+          }
+          &:nth-child(3) {
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
+}

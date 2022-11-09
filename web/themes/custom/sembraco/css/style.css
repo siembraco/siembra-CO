@@ -1,0 +1,13 @@
+/**
+ * @file
+ * Subtheme specific CSS.
+ */
+@media (max-width: 991px)
+.wg-default, .wg-default .country-selector {
+    top: 1.5%;
+    left: 25%;
+    right: initial;     
+    transition: all 0.5s;
+    background-color: #177755;
+    border-color: #177755;
+}

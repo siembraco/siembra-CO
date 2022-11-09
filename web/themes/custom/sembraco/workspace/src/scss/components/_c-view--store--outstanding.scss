@@ -1,0 +1,272 @@
+.view {
+  &-store {
+    padding: 3.5rem 0;
+    margin: auto;
+    width: 75%;
+    @include mq(sm) {
+      width: 40rem;
+    }
+    @include mq(md) {
+      padding: 7rem 0;
+      width: 100%;
+      max-width: 80%;
+    }
+    .view {
+      &-header {
+        .title__custom--center {
+          color: $green;
+          font-size: 3rem;
+          line-height: 1.2;
+          font-family: $BCNovaticaCYR;
+          font-weight: 600;
+          @include mq(md) {
+            font-size: 4rem;
+          }
+          &:before {
+            bottom: -1rem;
+          }
+        }
+      }
+      &-content {
+        margin: auto;
+        padding: 4rem 0;
+        @include mq(md) {
+          width: 100%;
+        }
+        .views {
+          &-row {
+            @include mq(md) {
+              margin: 0 0.4rem;
+              width: 33.3%;
+            }
+            img {
+              width: 100%;
+            }
+          }
+        }
+        .views-field {
+          .views-row {
+            width: 66%;
+            max-width: 66%;
+            margin: 0 1rem;
+            @include mq(md) {
+              width: 33%;
+            }
+            .field--type-image {
+              img {
+                width: 100%;
+              }
+            }
+            &--content {
+              background: $green-light 0% 0% no-repeat padding-box;
+              padding: 3rem 2.5rem 2rem;
+              width: 100%;
+              @include mq(md) {
+                padding: 3rem 3.5rem 2rem 3rem;
+              }
+              .views-field {
+                &-title {
+                  a {
+                    font: normal normal bold 15px/30px Arial;
+                    letter-spacing: 0px;
+                    color: $green;
+                    margin: 0 0 1.3rem;
+                    text-decoration: none;
+                    line-height: 1.2;
+                  }
+                }
+                &-body {
+                  p {
+                    font: normal normal normal 14px/24px Arial;
+                    letter-spacing: 0px;
+                    color: $green;
+                    min-height: 5rem;
+                    display: flex;
+                    align-items: center;
+                  }
+                }
+                &-precio {
+                  display: flex;
+                  align-items: center;
+                  color: $orange;
+                  font-family: $FranklinGothicATF;
+                  font-weight: 600;
+                  font-size: 1.5rem;
+                  height: 3rem;
+                  margin: 1rem 0 2rem;
+                  position: relative;
+                  &::before,
+                  &::after {
+                    @include pseudo();
+                    background-image: url("../assets/images/icons/line-orange.png");
+                    width: 100%;
+                    height: 0.2rem;
+                  }
+                  &::before {
+                    top: 0;
+                  }
+                  &::after {
+                    bottom: 0;
+                  }
+                }
+                &-link {
+                  a {
+                    &:hover {
+                      background-color: $green;
+                      color: $white;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .flickity {
+          &-prev-next-button {
+            &.previous {
+              left: -4rem;
+              @include mq(md) {
+                left: -5.5rem;
+              }
+            }
+            &.next {
+              right: -4rem;
+              @include mq(md) {
+                right: -5.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+body {
+  &.store {
+    .view {
+      &-store {
+        width: 100%;
+        padding: 1.5rem;
+        @include mq(sm) {
+          width: 46rem;
+        }
+        @include mq(md) {
+          padding: 2rem 1.5rem;
+          width: initial;
+          width: 100%;
+          max-width: 100%;
+        }
+        .field--type-image img,
+        .field--name-field-user-picture img {
+          @include mq(md) {
+            padding: 0 0 3rem;
+          }
+        }
+        #edit-price-number-wrapper {
+          max-width: 170px;
+        }
+        .view {
+          &-filters {
+            legend,
+            label {
+              font-family: $FranklinGothicATF;
+              color: $green;
+              margin: 0 0 1.1rem;
+            }
+            .form-row .form-actions{
+              margin: 0 !important;
+              align-self: flex-end;
+            }
+            .fieldset-wrapper {
+              @include mq(md) {
+                display: flex;
+              }
+              .js-form-item-price__number-min,
+              .js-form-item-price__number-max {
+                @include mq(md) {
+                  padding: 0 3px;
+                }
+                label {
+                  @include mq(md) {
+                    display: none;
+                  }
+                }
+              }
+            }
+            .form-row {
+              display: flex;
+              flex-direction: column;
+              @include mq(md) {
+                flex-direction: row;
+                align-content: flex-end;
+              }
+              input[type="text"],
+              select {
+                background-color: $green-light;
+                border-radius: 1.2rem;
+                border: 0.1rem solid $green;
+                color: $greeni;
+                font-family: $FranklinGothicATF;
+                font-weight: 500;
+                font-size: 1.3rem;
+                text-transform: uppercase;
+              }
+              .form-actions {
+                .button {
+                  margin: 0 0 1rem 0;
+                }
+              }
+            }
+          }
+          &-content {
+            padding: 0;
+            .field {
+              &--type-image {
+                margin: 0;
+              }
+            }
+            .views {
+              &-row {
+                width: 100%;
+              }
+              &-col {
+                padding: 1.5rem;
+                width: 100% !important;
+                position: relative;
+                @include mq(md) {
+                  width: 33.3% !important;
+                }
+                .views-field {
+                  &-nothing {
+                    .field-content {
+                      .views-row {
+                        &--content {
+                          @include mq(md) {
+                            padding: 3rem 3.5rem 6rem 3rem;
+                          }
+                          .views-field {
+                            &-title {
+                              a {
+                                display: block;
+                                margin: 2rem 0 0;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  &-variations-target-id {
+                    position: absolute;
+                    right: 3.5rem;
+                    bottom: 2.5rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,524 @@
+#edit-acepto-terminos--description,
+.form-item-tyc .webform-element-description {
+    display: block;
+    color: #0a1f1a;
+    font-family: "Franklin Gothic ATF";
+    font-size: 1.5rem;
+}
+
+.layout--onecol {
+  position: relative;
+}
+
+.layout--onecol .block-formblock-user-register {
+    width: 495px;
+    position: absolute;
+    top: 0;
+    right: 5%;
+}
+
+.section-1 .content-main {
+  width: 65%;
+}
+
+.section-1 {
+  min-height: 95vh;
+  padding: 30px 6% 0;
+      display: flex;
+  background-size: cover !important;
+}
+
+.section-1 .mainBanner {
+  display: flex;
+  height: 100%;
+}
+
+.section-1 .mainBanner .content-main h2 {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-family: "BC Novatica CYR";
+}
+
+.section-1 .mainBanner .content-main h1 {
+  font-size: 66px;
+  color: #fff;
+  font-family: "BC Novatica CYR";
+}
+
+.section-1 .mainBanner .content-main h1 strong {
+  color: #eb5d37;
+}
+
+.section-1 .mainBanner .content-main a {
+  font-size: 30px;
+  color: #fff;
+  display: flex;
+  margin-top: 20px;
+font-family: "BC Novatica CYR";
+}
+
+.section-2 {
+  padding: 80px 6%;
+  background-size: cover !important;
+}
+
+.section-2 img {
+	    width: 500px;
+    max-width: 500px !important;
+
+}
+
+.section-2 .content-second-banner {
+  display: flex;
+}
+
+.section-2 h2 {
+  color: #eb5d37;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-family: "BC Novatica CYR";
+}
+
+.section-2 p {
+  color: #fefefe;
+  font-size: 27px;
+  font-family: "BC Novatica CYR";
+}
+
+.section-2 h3 {
+  margin-top: 20px;
+  font-size: 36px;
+  color: #f3f3f3;
+  font-family: "BC Novatica CYR";
+}
+
+.section-2 h3 strong {
+  font-size: 36px;
+  color: #eb5d37;
+}
+
+.section-3 .col-content-1,
+.section-3 .col-content-2 {
+  display: flex;
+
+}
+
+.section-3 .content-col {
+  padding: 50px;
+  width: 50%;
+  position: relative;
+}
+
+
+.section-3 .content-col img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.section-3 .content-col p {
+  color: #f3f3f3;
+  font-size: 24px;
+  font-family: "BC Novatica CYR";
+}
+
+.section-3 .content-col h2 {
+  color: #f3f3f3;
+  font-size: 48px;
+  margin-bottom: 40px;
+  font-family: "BC Novatica CYR";
+}
+
+.section-3 .content-col h3 {
+  color: #f3f3f3;
+  font-size: 50px;
+  margin-top: 40px;
+  font-family: "BC Novatica CYR";
+}
+
+.section-4 {
+  background-size: cover !important;
+  padding: 80px 4%;
+  position: relative;
+font-family: "BC Novatica CYR";
+}
+
+.section-4 .content-seccion {
+	width: 73%;
+}
+
+.section-4 h2 {
+  font-size: 48px;
+  color: #eb5d37;
+  margin-bottom: 20px;
+font-family: "BC Novatica CYR";
+}
+
+.section-4 p {
+  color: #000000;
+  font-size: 30px;
+	font-family: "BC Novatica CYR";
+}
+
+.section-4 .itemsdetail {
+  display: flex;
+  margin-top: 80px;
+  align-items: center;
+}
+
+.section-4 .itemsdetail .item {
+  display: flex;
+  align-items: center;
+	margin: 0 10px;
+}
+
+.section-4 .itemsdetail .item img {
+	margin-right: 25px;
+}
+
+.section-4 .itemsdetail .content-item h4 {
+  font-size: 20px;
+  color: #eb5d37;
+  margin-bottom: 20px;
+}
+
+.section-4 .itemsdetail .content-item p {
+  color: #000000;
+  font-size: 15px;
+}
+
+.section-4 .contentAbsolute {
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 355px;
+  padding: 40px 26px;
+  background-color: #ffffff85;
+}
+
+.section-4 .contentAbsolute p {
+  font-size: 24px;
+  color: #000;
+}
+
+
+.section-4 .contentAbsolute p strong {
+  font-size: 24px;
+  color: #eb5d37;
+}
+
+.section-4 .contentAbsolute a {
+  display: flex;
+  color: #fff;
+  font-size: 22px;
+  text-transform: uppercase;
+  padding: 7px 41px 9px;
+  border-radius: 20px;
+  background-color: #f8b021;
+      display: block;
+    margin: 20px auto;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 0px 5px 2px #0000003d;
+}
+
+@media(max-width: 990px) {
+
+	.section-2 .content-second-banner {
+	  flex-wrap: wrap;
+	}
+
+	.section-3 .col-content-1, .section-3 .col-content-2 {
+	  flex-wrap: wrap;
+	}
+
+	.section-3 .content-col {
+	  width: 100%;
+	}
+
+	.section-4 .contentAbsolute {
+  	  position: initial;
+          margin-top: 40px;
+	}
+
+	.section-4 .itemsdetail {
+	  flex-wrap: wrap;
+	}
+
+	.section-4 .content-seccion {
+	  width: 100%;
+	}
+
+	.section-2 img {
+	  margin-top: 50px;
+	  width: 300px;
+	}
+
+	.section-2 h3 {
+	  font-size: 22px;
+	}
+
+	.section-3 .content-col h3 {
+	  font-size: 27px;
+	}
+
+	.section-1 .mainBanner {
+	  flex-wrap: wrap;
+	}
+
+	body.bbva .node__content .view-landings .view-content .views-field-body {
+		width: 100% !important;
+	}
+
+	.alert-wrapper .alert {
+		padding-bottom: 35px !important;
+    		padding-top: 35px !important;
+	}
+
+	.banner-title {
+		width: 90% !important;
+	}
+
+	.banner-title h2 {
+		font-size: 25px !important;
+	}
+
+	.banner-title h3 {
+		font-size: 18px !important;
+	}
+
+	.banner-template-two .content .field--name-body .banner-title:after {
+		content: none !important;
+	}
+}
+
+.layout-checkout-form .siembraco--social-auth{
+        margin-bottom: 35px;
+}
+
+layout-checkout-form .siembraco--social-auth .social-btns {
+        margin-top: 30px;
+}
+
+layout-checkout-form .siembraco--social-auth h2 {
+        font-size: 21px;
+}
+
+.redes-main {
+	display: flex;
+	    margin: 0;
+    padding: 0;
+}
+
+.redes-main li {
+	list-style: none;
+	margin 0 15px;
+}
+
+.redes-main li img {
+	width: 30px;
+    	height: auto;
+}
+
+.content__inline {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.content__inline .link__custom--primary {
+    margin-left: 15px;
+	margin-right: 15px;
+}
+
+.iconos-animados-contenedor {
+	position: absolute;
+    width: 100%;
+    z-index: 2;
+    bottom: 39px;
+	display: flex;
+	justify-content: center;
+}
+
+.view-id-map_result {
+	padding-top: 107px;
+}
+
+.view-id-map_result .view-header {
+	color: #177755;
+    font-family: "Franklin Gothic ATF";
+    font-size: 28px;
+}
+
+.boxcont {
+			width: 300px;
+			height: 300px;
+			display: inline-block;
+			margin: 60px;
+			}
+			.margen_left{
+				margin-left: 100px;
+			}
+			
+		.box2 {	
+			animation: rotation3 9s infinite linear !important;
+			-webkit-filter: drop-shadow( 4px 4px 3px rgb(230 255 229 / 72%));
+        	filter: drop-shadow( 4px 4px 3px rgb(230 255 229 / 72%));
+		}
+		.box3 {	
+			animation: rotation3 14s infinite linear !important;
+			-webkit-filter: drop-shadow( 4px 4px 3px rgb(230 255 229 / 72%));
+        	filter: drop-shadow( 4px 4px 3px rgb(230 255 229 / 72%));
+		}
+		.box4 {	
+			animation: rotation3 24s infinite linear !important;
+			-webkit-filter: drop-shadow( 4px 4px 3px rgb(230 255 229 / 72%));
+        	filter: drop-shadow( 4px 4px 3px rgb(230 255 229 / 72%));
+		}
+		.boxint {
+		  position: absolute;
+		  width: 300px;
+		  height: 300px;		 
+		 
+		}
+		.boxint2 {
+		  position: absolute;
+		  width: 200px;
+		  height: 200px;		 
+		 
+		}
+		.boxint3 {
+		  position: absolute;
+		  width: 250px;
+		  height: 250px;		 
+		 
+		}
+		
+		.aros{
+			transform: perspective( 400px ) rotateX( 55deg );
+		}
+		.ani1{
+			animation: rotation 7s infinite linear;
+		}
+		.ani2{
+			animation: rotation2 3s infinite linear;
+		}
+		.ani12{
+			animation: rotation 3s infinite linear;
+		}
+		.ani22{
+			animation: rotation2 1s infinite linear;
+		}
+		.ani13{
+			animation: rotation 10s infinite linear;
+		}
+		.ani23{
+			animation: rotation2 5s infinite linear;
+		}
+		@keyframes rotation {
+		  from {
+		    transform: perspective( 400px ) rotateX( 55deg ) rotate(0deg);
+		  }
+		  to {
+		    transform: perspective( 400px ) rotateX( 55deg ) rotate(359deg);
+		  }
+		}
+		@keyframes rotation2 {
+		  from {
+		    transform: perspective( 400px ) rotateX( 55deg ) rotate(359deg);
+		  }
+		  to {
+		    transform: perspective( 400px ) rotateX( 55deg ) rotate(0deg);
+		  }
+		}
+
+		@keyframes rotation3 {
+		  from {
+		    transform:  rotateY(359deg);
+		  }
+		  to {
+		    transform:  rotateY(-359deg);
+		  }
+		}
+		
+
+
+.line1 {
+    stroke-dasharray: 340;
+    stroke-dashoffset: 60;
+    animation: dash 1.5s linear alternate infinite;
+  }
+
+  .line2 {
+    stroke-dasharray: 420;
+    stroke-dashoffset: 420;
+    animation: dash2 1.5s linear alternate infinite;
+  }
+
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 360;
+    }
+    to {
+      stroke-dashoffset: 40;
+    }
+  }
+
+  @keyframes dash2 {
+    from {
+      stroke-dashoffset: 280;
+    }
+    to {
+      stroke-dashoffset: -40;
+    }
+  }
+
+
+/* On screens that are 992px wide or less, the background color is blue */
+@media screen and (max-width: 1300px) {
+  .sol {
+   display: none;
+  }
+}
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media screen and (max-width: 900px) {
+  .sol {
+   display: none;
+  }
+  .planta {
+   display: none;
+  }
+	.boxcont {
+	    transform: scale(0.5);
+	}
+	.iconos-animados-contenedor {
+		bottom: 95px;
+	}
+	.content__inline {
+		flex-wrap: wrap;
+	}
+}
+.carga{
+	color: #fff;
+	position: absolute;
+	text-align: center;
+	margin-left: 285px;
+	
+	animation-name: carga1;
+	animation-duration: 4s;
+}
+@keyframes carga1 {
+  0%   {margin-left: 285px;}
+  25%  {margin-left: 485px;}
+  50%  {display: block;}
+  100% {display: block;}
+}
+
+.view-slider .view-content .field-content .views-field--wrapper {
+	z-index: 50 !important;
+}
+

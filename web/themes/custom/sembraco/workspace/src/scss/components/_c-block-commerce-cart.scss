@@ -1,0 +1,86 @@
+.block-commerce-cart {
+    position: fixed;
+    right: 0;
+    top: 15%;
+    z-index: 1;
+  @include mq (md) {
+    position: relative;
+    right: initial;
+    top: initial;
+  }
+  h2 {
+    display: none;
+  }
+  .content {
+    width: 14rem;
+    .cart--cart-block {
+      .cart-block {
+        &--summary {
+          position: relative;
+          .cart-block {
+            &--summary__icon {
+              background-image: url('../assets/images/icons/icon-card-green.svg');
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+              display: block;
+              width: 3.5rem;
+              height: 3.5rem;
+              img {
+                visibility: hidden;
+              }
+            }
+            &--summary__count {
+              color: $white;
+              background-color: $orange;
+              border-radius: 5rem;
+              border: .2rem solid $green;
+              font-family: $FranklinGothicATF;
+              font-size: 1.2rem;
+              font-weight: 600;
+              padding: .5rem 1rem .5rem 2.5rem;
+              position: absolute;
+              top: -30%;
+              right: 5%;
+              &::before {
+                @include pseudo();
+                content: "+";
+                font-size: 2rem;
+                font-family: $FranklinGothicATF;
+                font-weight: 600;
+                left: .5rem;
+                top: -.1rem;
+              }
+            }
+          }
+        }
+        &--contents {
+          position: fixed;
+          right: 0;
+          width: 100%;
+          top: 12%;
+          @include mq (md) {
+            width: 30%;  
+          }
+          &__items {
+            max-height: 220px;
+          }
+          &__links {
+            a {
+              background-color: $green;
+              border-radius: 1rem;
+              color: $green-light;
+              font-family: $BCNovaticaCYR;
+              font-size: 1rem;
+              font-weight: bold;
+              padding: .5rem 2rem;
+              text-decoration: none;
+              text-transform: uppercase;
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

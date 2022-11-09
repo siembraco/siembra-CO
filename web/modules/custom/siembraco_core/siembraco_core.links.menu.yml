@@ -1,0 +1,6 @@
+siembraco_core.account_settings_form:
+  title: 'Siembraco accounts administration'
+  route_name: siembraco_core.account_settings
+  description: 'Configure account settings'
+  parent: system.admin_config_system
+  weight: 99

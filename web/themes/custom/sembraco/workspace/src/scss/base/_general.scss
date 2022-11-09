@@ -1,0 +1,341 @@
+/**
+ * _link.scss
+ *
+ * These are the styles general.
+ *
+ * Index
+ * -  All site
+ *   |- body
+ *   |- p
+ *   |- e
+ *   |- Custom loading
+ *   |- Animate loading
+ *   |- row
+ */
+
+//html
+html {
+  font-size: 10px;
+}
+
+//body
+body {
+  background-color: $white;
+  font: inherit;
+  font-size: 16px;
+  @include mq(md) {
+    padding: 0 0 0 6rem;
+  }
+  @include mq(xxlg) {
+    padding: initial;
+  }
+}
+
+//p
+p {
+  margin: 0;
+  font-family: $FranklinGothicATF;
+}
+
+//em
+em {
+  font-style: normal;
+}
+
+.field--type-image img,
+.field--name-field-user-picture img {
+  margin: 0;
+}
+
+.views-row {
+  --bs-gutter-y: 0;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row [class*="col-"]:not(:first-child),
+.row [class*="col-"]:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+.col {
+  padding: 0;
+}
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  padding: 0;
+}
+.flickity-viewport,
+.row {
+  &:focus-visible {
+    outline: none;
+  }
+}
+//custom loading
+.custom-loading {
+  //background-image: url("../images/icons/loading.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  animation: rotate-center 0.6s ease-in-out infinite both;
+  transform-origin: center;
+  transform-box: fill-box;
+  height: 87px;
+  width: 75px;
+  margin: 13px auto 0;
+}
+
+//animate loading
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+#main {
+  .block-system-breadcrumb-block,
+  .node__meta {
+    display: none;
+  }
+}
+
+.node__content {
+  margin: 0;
+}
+
+body {
+  &.user-logged-in {
+    body.toolbar-horizontal.toolbar-tray-open #navbar-top.fixed-top,
+    body.toolbar-horizontal.toolbar-tray-open #navbar-main.fixed-top {
+      top: 0;
+    }
+    .only-login {
+      display: block !important;
+    }
+    .only-not-login {
+      display: none !important;
+    }
+    //nav-link__dashboard only-login nav-link nav-link--administrar-cuenta
+  }
+}
+.only-login {
+  display: none !important;
+}
+.only-not-login {
+  display: block !important;
+}
+// Redes
+.siembraco--social-auth {
+  text-align: center;
+  margin: 7rem 0 -4rem;
+  .btn {
+    border-radius: 2rem;
+    font-family: $FranklinGothicATF;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0 0.5rem;
+    padding: 0.7rem 2rem 0.7rem 4rem;
+    text-transform: uppercase;
+    &:first-child {
+      background-color: $blue;
+      border: 0.2rem solid $blue;
+      color: $white;
+      background-image: url("../assets/images/icons/fb.svg");
+      background-position: 1rem center;
+      background-repeat: no-repeat;
+    }
+    &:last-child {
+      color: $gray;
+      border: 0.2rem solid $gray;
+      background-image: url("../assets/images/icons/google.png");
+      background-position: 1rem center;
+      background-repeat: no-repeat;
+      background-size: 27px;
+    }
+  }
+}
+#page > div.featured-top > aside > section > div.alert-wrapper > div.alert.alert-success {
+  background: $green;
+  color: white;
+  padding: 2rem 0;
+  border-color: $green;
+  font-family: $FranklinGothicATF;
+  a {
+    color: $orange;
+    font-family: $FranklinGothicATF;
+  }
+}
+body.path-product .featured-top .row .alert-wrapper {
+  width: 100%;
+}
+
+div.weglot-container,
+div.wg-default,
+div.wg-default aside.country-selector {
+  top: 1.5rem;
+  bottom: initial;
+  width: 6.5rem;
+  transition: all 0.5s;
+  background-color: $green;
+  border-color: $green;
+  @include mq(md) {
+    top: initial;
+    left: 0;
+    right: initial;
+    bottom: 27%;
+    width: 6rem;
+  }
+  @include mq(mobile, tablet) {
+    top: 1.5%;
+    left: 25%;
+    right: initial;     
+    transition: all 0.5s;
+    background-color: #177755;
+    border-color: #177755;
+   } 
+}
+div.weglot-container,
+div.wg-default,
+div.wg-default aside.country-selector {
+  ul {
+    background-color: $green;
+    border-color: $green;
+  }
+}
+
+div.wg-default aside.wg-drop.country-selector a {
+  color: $white;
+  font-family: $FranklinGothicATF;
+  letter-spacing: 1.2px;
+  font-size: 13px;
+  letter-spacing: 3px;
+  overflow: hidden;
+  padding: 0px 1rem;
+  @include mq(md) {
+    font-size: 16px;
+    //width: 35rem;
+    width: 5rem;
+    overflow: hidden;
+    transition: all 0.5s;
+    padding: 0px 2rem;
+  }
+}
+aside.wg-drop.country-selector div.wgcurrent {
+  border-color: $green;
+}
+aside.wg-drop.country-selector div.wgcurrent:after {
+  right: -14px;
+  @include mq(md) {
+    right: 0;
+  }
+}
+div.wg-default aside.weg-openup {
+  div.wgcurrent {
+    a#weglot-language-es {
+      @include mq(md) {
+        width: 8.5rem;
+        transition: all 0.5s;
+      }
+    }
+  }
+}
+div.wg-default aside.weg-openup {
+  @include mq(md) {
+    width: 13rem;
+    transition: all 0.5s;
+  }
+}
+div.wg-default aside.wg-drop.country-selector.weg-openup a {
+  width: 12rem;
+}
+#mapa-result-siembraco {
+  height: 1600px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+html {
+  overflow: hidden;
+  transition: all 0.5s;
+  &:before {
+    content: "";
+    background-image: url("../assets/images/icons/loading.gif");
+    background-size: 25rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    position: absolute;
+    background-color: $white;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 9999999999;
+    opacity: 1;
+    transition: all 0.5s;
+  }
+  &.preload {
+    overflow: initial;
+    transition: all 0.5s;
+    &:before {
+      opacity: 0;
+      height: 0;
+      transition: all 0.5s;
+    }
+  }
+}
+.webform-confirmation-modal {
+  right: 0;
+  margin: auto;
+  top: 20%;
+  border: none;
+  border-radius: 13px;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  max-width: 70rem;
+  div.ui-dialog-titlebar {
+    background: $green;
+    border: none;
+    color: white;
+    text-align: center;
+  }
+  div.ui-widget-content {
+    padding: 2rem 3rem 6rem;
+    text-align: center;
+  }
+}
+#mapa-result-siembraco {
+  .map__siembraco {
+    &--title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 1rem;
+      color: $--unnamed-color-eb5d37;
+    }
+  }
+  a {
+    text-decoration: none;
+    margin: 0 0 0.2rem;
+    color: $green;
+  }
+}
+
+.path-administrar-cuenta {
+  .alert-wrapper {
+    display: none;
+  }
+}

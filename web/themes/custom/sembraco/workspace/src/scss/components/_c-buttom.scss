@@ -1,0 +1,30 @@
+%button-custom {
+  background: #dff2eb 0% 0% no-repeat padding-box;
+  border: 1px solid $green;
+  border-radius: 20px;
+  text-align: center;
+  font: normal normal bold 12px/30px $BCNovaticaCYR;
+  letter-spacing: 1.2px;
+  color: $green;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  padding: 0.3rem 1rem;
+  max-width: max-content;
+  @include mq(md) {
+    padding: 0.5rem 3rem;
+    border-radius: 24px;
+  }
+}
+.link__custom--primary a,
+a.link__custom--primary {
+  @extend %button-custom;
+}
+.buttom__custom {
+  &--medio a{
+    @extend %button-custom;
+    font: normal normal bold 10px/10px $BCNovaticaCYR;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+  }
+}

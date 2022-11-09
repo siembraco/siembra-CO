@@ -1,0 +1,45 @@
+%title-main {
+  text-align: left;
+  font: normal normal 800 25px/78px $BCNovaticaCYR;
+  letter-spacing: 2.1px;
+  color: $green;
+  margin: 0 auto 1rem;
+  font-weight: 600;
+  position: relative;
+  width: auto;
+  @include mq (md) {
+    width: max-content;  
+  }
+  &::before {
+    content: "";
+    background-color: $green;
+    display: block;
+    position: absolute;
+    width: 5rem;
+    height: 0.1rem;
+    bottom: 1rem;
+    left: 0;
+  }
+}
+.title {
+  &__custom {
+    &--center {
+      @extend %title-main;
+      text-align: center;
+      font: normal normal 700 23px/78px $BCNovaticaCYR;
+      &::before {
+        width: 90%;
+        right: 0;
+        margin: auto;
+      }
+    }
+    &--withoutline{
+      @extend %title-main;
+      text-align: center;
+      font: normal normal 700 23px/78px $BCNovaticaCYR;
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

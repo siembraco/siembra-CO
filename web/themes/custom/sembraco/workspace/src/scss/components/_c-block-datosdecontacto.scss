@@ -1,0 +1,106 @@
+#block-datosdecontacto {
+  .content {
+    &__wrapper--info {
+      .field {
+        &--name-field-title {
+          display: none;
+        }
+        &--name-body {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          @include mq (md) {
+            flex-direction: row;
+          }
+        }
+      }
+      &--location {
+        position: relative;
+        margin: 0 0 2rem;
+        @include mq (md) {
+          margin: initial;
+          width: 21rem;
+          &::after {
+            @include pseudo();
+            background-color: $green;
+            width: .1rem;
+            height: 100%;
+            top: 50%;
+            bottom: 50%;
+            right: 5%;
+            margin: auto;
+          }
+        }
+        &::before {
+          @include pseudo();
+          background-image: url('../assets/images/icons/icon-location-green.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 2.6rem;
+          height: 4rem;
+          left: -3.5rem;
+        }
+        span {
+          color: $green;
+          font-family: $FranklinGothicATF;
+          font-weight: 600;
+          font-size: 1.3rem;
+          text-transform: uppercase;
+        }
+        p {
+          color: $text-black;
+          font-family: $FranklinGothicATF;
+          font-size: 1.6rem;
+        }
+      }
+      &--contactus {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 2rem;
+        position: relative;
+        @include mq (md) {
+          margin: initial;
+          padding: 0 0 0 5rem;
+          width: 20rem;
+          &::after {
+            @include pseudo();
+            background-color: $green;
+            width: .1rem;
+            height: 100%;
+            top: 50%;
+            bottom: 50%;
+            right: 7%;
+            margin: auto;
+          }
+        }
+        &::before {
+          @include pseudo();
+          background-image: url('../assets/images/icons/icon-ws-green.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 3.4rem;
+          height: 4rem;
+          left: -4rem;
+          @include mq (md) {
+            left: .6rem;
+          }
+        }
+        .info--ws {
+          color: $green;
+          font-family: $FranklinGothicATF;
+          font-weight: 600;
+          font-size: 1.3rem;
+          padding: .2rem 0;
+          text-transform: uppercase;
+          text-decoration: none;
+          &__number {
+             color: $text-black;
+            font-family: $FranklinGothicATF;
+            font-size: 1.6rem;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+<?php
+
+/**
+ * @file
+ * Contains instride_core.module.
+ */
+use Drupal\Core\Cache\RefinableCacheableDependencyInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\user\UserInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\node\Entity\Node;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+/**
+ * Implements hook_help().
+ */
+function siembraco_core_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the instride_core module.
+    case 'help.page.siembraco_core':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('SiembraCo general utilities.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+/**
+ * Implements hook_theme().
+ */
+function siembraco_core_theme($existing, $type, $theme, $path) {
+  return [
+    'siembraco_account' => [
+      'variables' => [
+        'data' => NULL,
+      ],
+    ],
+  ];
+}
+/**
+ * Implements hook_menu_local_tasks_alter().
+ */
+function siembraco_core_menu_local_tasks_alter(&$data, $route_name, RefinableCacheableDependencyInterface &$cacheability) {
+  if(in_array($route_name, ['user.register', 'user.pass', 'user.login'])){
+    unset($data['tabs']);
+  }
+}
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function siembraco_core_form_user_login_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $social_links = <<<EOM
+  <div class="siembraco--social-auth">
+  <a class="btn" data-name="facebook" href="/user/login/facebook">FACEBOOK</a>
+  <a class="btn" data-name="google" href="/user/login/google">GOOGLE</a>
+  </div>
+  EOM;
+  $form['#prefix'] = '<h2>Ingresa con:</h2>';
+  $form['#prefix'] .= $social_links;
+  $url_object = Url::fromRoute('user.pass');
+  $form['password_reset_link'] = [
+    '#type' => 'link',
+    '#url' => $url_object,
+    '#title' => new TranslatableMarkup('Forgotten your username or password?'),
+    '#attributes' => [
+      'class' => ['user-reset-password-link'],
+    ],
+  ];
+  $form['#submit'][] = 'siembraco_core_user_login_form_submit';
+}
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function siembraco_core_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id){
+  $social_links_register = <<<EOM
+  <div class="siembraco--social-auth">
+  <a class="btn" data-name="facebook" href="/user/login/facebook">FACEBOOK</a>
+  <a class="btn" data-name="google" href="/user/login/google">GOOGLE</a>
+  </div>
+  EOM;
+  $form['#prefix'] = '<h2>Ingresa con:</h2>';
+  $form['#prefix'] .= $social_links_register;
+  $form['#submit'][] = 'siembraco_core_user_login_form_submit';
+}
+/**
+ * Custom submit handler for the login form.
+ */
+function siembraco_core_user_login_form_submit($form, FormStateInterface $form_state) {
+  $url = Url::fromRoute('siembraco_core.account');
+  $form_state->setRedirectUrl($url);
+}
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function siembraco_core_commerce_order_insert(EntityInterface $entity) {
+  if ($entity->bundle() == 'default') {
+    $node = Node::create(array(
+      'type' => 'orders_aditional_info',
+      'title' => 'Información adicional - orden # ' . $entity->id(),
+      'status' => 1,
+    ));
+    $node->save();
+    $entity->field_additional_data->target_id = $node->id();
+    $entity->save();
+  }
+}

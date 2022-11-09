@@ -1,0 +1,101 @@
+form {
+  label {
+    color: $text-black;
+    font-family: $FranklinGothicATF;
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="number"],
+  input[type="tel"] {
+    border: 0.1rem solid $border;
+    border-radius: 1.6rem;
+    color: $text-black;
+    font-family: $FranklinGothicATF;
+    font-size: 1.5rem;
+    height: 3.5rem;
+  }
+  select {
+    border: 0.1rem solid $border;
+    border-radius: 1.6rem;
+    color: $text-black;
+    font-family: $FranklinGothicATF;
+    font-size: 1.5rem;
+    height: 3.5rem;
+    &.form-select {
+      background-color: transparent;
+      border: 0.1rem solid $border;
+      border-radius: 1.6rem;
+      color: $text-black;
+      font-family: $FranklinGothicATF;
+      font-size: 1.5rem;
+      height: 3.5rem;
+    }
+  }
+  textarea {
+    &.form-control {
+      border: 0.1rem solid $border;
+      border-radius: 1.6rem;
+      color: $text-black;
+      font-family: $FranklinGothicATF;
+      font-size: 1.5rem;
+    }
+  }
+  .btn {
+    background-color: $green;
+    border-color: transparent;
+    border: 0.1rem solid $green;
+    border-radius: 1.5rem;
+    color: $green-light;
+    font-family: $BCNovaticaCYR;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    margin: 2rem 0 0;
+    padding: 0.8rem 1.8rem;
+    text-transform: uppercase;
+    &:hover {
+      background-color: $green-light;
+      border-color: transparent;
+      border: 0.1rem solid $green;
+      color: $green;
+    }
+  }
+  [data-drupal-selector="edit-actions"] {
+    display: flex;
+    justify-content: end;
+  }
+  .form-check-input {
+    background-color: $green-light;
+    border: 0.2rem solid $green;
+    margin: 0;
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    max-width: 1.9rem;
+    &:checked {
+      background-color: $green-light;
+      border-color: $green;
+    }
+    &:checked[type="radio"] {
+      background-image: url("../assets/images/icons/icon-green-check.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 60%;
+    }
+    &:checked[type="checkbox"] {
+      background-image: url("../assets/images/icons/icon-check-green.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 60%;
+    }
+  }
+  .btn-outline-primary:disabled,
+  .btn-outline-primary.disabled {
+    color: $green;
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,146 @@
+body {
+  &.path-product {
+    .banner,
+    .featured-top,
+    #main-wrapper,
+    .featured-bottom {
+      margin: auto;
+      max-width: 200rem;
+    }
+    .featured-bottom {
+      position: relative;
+      @include mq(md) {
+        &::before {
+          @include pseudo();
+          background-image: url(../assets/images/bg/trama-final.png);
+          width: 100%;
+          height: 16rem;
+          background-size: contain;
+          background-repeat: no-repeat;
+          top: -15rem;
+        }
+      }
+    }
+    &.path-product {
+      overflow-x: hidden;
+    }
+    form [data-drupal-selector="edit-actions"] {
+      justify-content: flex-start;
+    }
+    .featured-top {
+      .row > * {
+        flex-shrink: initial;
+        padding: 0;
+        width: auto;
+      }
+      .region-featured-top {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+        background-color: $whiteb;
+        padding: 3rem 0;
+        @include mq(md) {
+          flex-direction: row;
+        }
+        @include mq(lg) {
+          padding: 3rem 5rem 3rem 3rem;
+        }
+        .menu--menu-login {
+          @include mq(md) {
+            width: 42rem;
+          }
+        }
+      }
+    }
+    .main-content {
+      background-image: url("../assets/images/bg/trama-fondo.jpg");
+      background-position: center;
+      background-size: 10rem;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      @include mq(md) {
+        padding: 2rem 0 25rem;
+      }
+      &::after {
+        @include mq(md) {
+          @include pseudo();
+          width: 17rem;
+          height: 100%;
+          background-image: url("../assets/images/bg/back-leaf.png");
+          background-repeat: repeat-y;
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+    article {
+      margin: auto;
+      max-width: 160rem;
+      @include mq(md) {
+        width: 85%;
+      }
+      .field {
+        &--type-entity-reference {
+          margin: 0;
+          width: 100%;
+        }
+        &--name-title {
+          color: $green;
+          font-family: $BCNovaticaCYR;
+          font-weight: 500;
+          font-size: 2rem;
+          padding: 2rem 0 4rem;
+          position: relative;
+          width: auto;
+          transform: translateX(-200%);
+          transition: all 0.7s;
+          @include mq(md) {
+            font-size: 2.5rem;
+            padding: 4rem 0;
+          }
+          &::after {
+            @include pseudo();
+            background-color: $green;
+            width: 8rem;
+            height: 0.1rem;
+            bottom: 3.5rem;
+          }
+          &.animation-siembraco {
+            transform: translateX(0);
+          }
+        }
+        &--name-price {
+          color: $orange;
+          font-family: $FranklinGothicATF;
+          font-size: 1.5rem;
+          font-weight: 600;
+          padding: 0.7rem 0;
+          position: relative;
+          width: max-content;
+          transform: translateX(-200%);
+          transition: all 0.7s;
+          &::before,
+          &::after {
+            @include pseudo();
+            background-image: url("../assets/images/icons/line-orange.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 0.1rem;
+          }
+          &::before {
+            top: 0;
+          }
+          &::after {
+            bottom: 0;
+          }
+          &.animation-siembraco {
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+  }
+}

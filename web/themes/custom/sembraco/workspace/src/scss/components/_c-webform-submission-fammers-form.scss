@@ -1,0 +1,115 @@
+form {
+  &.webform-submission-fammers-form,
+  &.webform-submission-bbva-form {
+    background-color: $green-light;
+    margin: auto;
+    padding: 5% 8%;
+    @include mq(md) {
+      padding: 7%;
+      max-width: 100%;
+    }
+    @include mq(md) {
+      max-width: 160rem;
+    }
+    .webformsff {
+      &__title {
+        color: $green;
+        font-family: $BCNovaticaCYR;
+        font-size: 3rem;
+        font-weight: 600;
+        margin: 0 auto 7rem;
+        position: relative;
+        text-align: center;
+        width: 90%;
+        @include mq(md) {
+          font-size: 4rem;
+          width: max-content;
+        }
+        &:after {
+          @include pseudo();
+          background-color: $green;
+          width: 90%;
+          height: 0.2rem;
+          left: 0;
+          right: 0;
+          margin: auto;
+          bottom: -1.2rem;
+          @include mq(md) {
+            width: 28rem;
+          }
+        }
+      }
+      &__text {
+        display: block;
+        font-family: $FranklinGothicATF;
+        font-size: 1.6rem;
+        line-height: 1.8;
+        margin: 0 0 3rem;
+        &--orange {
+          color: $orange;
+          line-height: 1.8;
+        }
+      }
+    }
+    .webform-radios-other {
+      .fieldset-legend {
+        color: $green;
+        display: block;
+        font-family: $FranklinGothicATF;
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin: 1rem 0 2rem;
+        @include mq(md) {
+          font-size: 2.2rem;
+        }
+      }
+      .js-webform-radios {
+        display: flex;
+        flex-direction: row;
+        width: max-content;
+        .js-form-item {
+          &:first-child {
+            margin: 0 3rem 0 0;
+          }
+          &:last-child {
+            display: none;
+          }
+          .form-check-label {
+            color: $green;
+            text-transform: capitalize;
+            margin: 0;
+          }
+        }
+      }
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="number"],
+    input[type="tel"] {
+      background-color: transparent;
+      border: 0.1rem solid $green;
+    }
+    select {
+      background-color: transparent;
+      border: 0.1rem solid $green;
+    }
+    [data-drupal-selector="edit-flexbox"] {
+      .webform-flex {
+        &--1,
+        &--2 {
+          flex: initial;
+          width: 100%;
+          @include mq(md) {
+            width: 50%;
+          }
+        }
+        // &--2 {
+        //   [data-drupal-selector="edit-container"] {
+        //     display: flex;
+        //   }
+        // }
+      }
+    }
+  }
+}

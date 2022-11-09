@@ -1,0 +1,23 @@
+body {
+  &.user-logged-in {
+    &.path-user {
+      #main-wrapper {
+        min-height: 100vh;
+        .profile {
+          .field {
+            &--name-user-picture {
+              img {
+                border-radius: 50%;
+                width: 12rem;
+                height: 12rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .nav-link--user-login{
+      display: none;
+    }
+  }
+}

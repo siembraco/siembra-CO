@@ -1,0 +1,22 @@
+.block-text {
+  padding: 3.5rem 2rem;
+  @include mq (md) {
+     padding: 3.5rem 0;
+  }
+  .content__wrapper {
+    &--info {
+      text-align: center;
+      p {
+        color: $white;
+        font-size: 1.8rem;
+        font-weight: 500;
+        @include mq (md) {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+  &__orange {
+    background-color: $orange;
+  }
+}

@@ -1,0 +1,7 @@
+name: localsiembraco
+recipe: drupal9
+config:
+  framework: drupal8
+  site: siembraco
+  id: 797d2923-4960-436f-ac2f-1b58a824417f
+  webroot: web

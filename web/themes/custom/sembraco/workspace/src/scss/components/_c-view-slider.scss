@@ -1,0 +1,226 @@
+.view-slider {
+  .row {
+    margin: 0;
+    padding: 0;
+  }
+  .field {
+    &--type-image {
+      margin: 0;
+    }
+  }
+  .view-content {
+    position: relative;
+    .field-content {
+      .views-field {
+        &--wrapper {
+          display: flex;
+          justify-content: center;
+          position: absolute;        
+          left: 0;
+          right: 0;
+          margin: auto;
+          bottom: 8rem;
+          width: 100%;
+          z-index: 1;
+          @include mq (sm) {
+            top: -18rem;
+          }
+          @include mq (md) {
+            justify-content: flex-end;
+            left: inherit;
+            top: initial;
+            bottom: initial;
+            right: 8rem;
+            width: 100%;
+          }
+          p {
+            margin: 0 0 3rem;
+            position: relative;
+            &::before {
+              content: "";
+              display: block;
+              background-color: $white;
+              width: 100%;
+              height: 0.1rem;
+              position: absolute;
+              bottom: -1.5rem;
+              @include mq (md) {
+                bottom: -3.5rem;
+              }
+            }
+            img {
+              max-width: 70rem;
+              width: 100%;
+            }
+          }
+          a {
+            background-color: transparent;
+            border: .1rem solid $white;
+            border-radius: 1.4rem;
+            color: $white;
+            font-family: $BCNovaticaCYR;
+            font-size: 2rem;
+            text-transform: capitalize;
+            max-width: 100%;
+            padding: .6rem 0 1rem;
+            line-height: 1;
+            @include mq (sm) {
+              padding: .6rem 1.5rem 1rem;
+            }
+            @include mq (md) {
+              border-radius: 2rem;
+              font-size: 3.2rem;
+              padding: .8rem 5rem 1.2rem;
+            }
+          }
+        }
+        &--content {
+          display: flex;
+          width: 70%;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          @include mq (sm) {
+            align-items: flex-end;
+          }
+          .title__custom--slider {
+            color: transparent;
+          }
+          .link__custom--primary {
+            position: relative;
+            width: 100%;
+            @include mq (sm) {
+              width: max-content;
+            }
+            @include mq (md) {
+              margin: 4rem 0 0;
+            }
+          }
+        }
+        &--media {
+          img {
+            height: 60rem;
+            object-fit: cover;
+            @include mq (md) {
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  &.path-frontpage {
+    .view-slider {
+      .views-field--media {
+        .field__item {
+          position: relative;
+          &::before {
+            @include pseudo();
+            background-color: $gl-green;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  &.about-us,
+  &.Contact,
+  &.store,
+  &.path-product {
+    .banner {
+      .field--name-field-imagen-page {
+        position: relative;
+        &::before {
+          @include pseudo();
+          background-color: $cream;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+body {
+  &.farmers {
+    .view-slider {
+      .view-content {
+        .field-content {
+          .views-field {
+            &--media {
+              display: flex;
+              justify-content: center;
+              img {
+                height: 30rem;
+                @include mq (md) {
+                  height: 60rem;
+                }
+              }
+              .field__item {
+                position: relative;
+                &::before {
+                  @include pseudo();
+                  background-color: $cream;
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+            &--wrapper {
+              right: 0;
+              top: 50%;
+              bottom: 50%;
+              margin: auto;
+              @include mq (md) {
+                top: 50%;
+                bottom: 50%;
+              }
+            }
+            &--content {
+              width: 100%;
+              justify-content: center;
+              align-items: center;
+              .title__custom--slider {
+                color: $white;
+                font-family: $BCNovaticaCYR;
+                font-size: 4rem;
+                font-weight: 600;
+                margin: 0 0 2rem;
+                position: relative;
+                @include mq (md) {
+                  font-size: 12rem;  
+                  margin: 0;
+                }
+                &::after {
+                  @include pseudo();
+                  background-color: $white;
+                  width: 100%;
+                  height: .1rem;
+                  bottom: -.5rem;
+                  @include mq (md) {
+                    bottom: -1.5rem;  
+                  }
+                }
+              }
+              .link__custom--primary {
+                width: 80%;
+                @include mq (sm) {
+                  width: auto;
+                }
+              }
+            }
+          }
+        } 
+      }
+    }
+  }
+}
+

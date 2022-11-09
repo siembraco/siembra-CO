@@ -1,0 +1,189 @@
+.view-block-farmers {
+  background: transparent linear-gradient(180deg, #e2d59c 0%, #e2d59c00 100%) 0% 0% no-repeat padding-box;
+  width: 100%;
+  height: 100%;
+  .view {
+    &-header {
+      position: relative;
+      background-color: $white;
+      .title__custom--withoutline {
+        font-family: $BCNovaticaCYR;
+        font-size: 2.5rem;
+        font-weight: 600;
+        width: 30rem;
+        padding: 0 0 -2rem;
+        position: relative;
+        @include mq (md) {
+          font-size: 4rem;
+          padding: 0 0 4.5rem;
+          width: auto;
+        }
+          &::after {
+          @include pseudo();
+          background-image: url("../assets/images/home-leaves.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          right: 0; 
+          margin: auto; 
+          z-index: 1;
+          top: 6rem;
+          @include mq (md) {
+            width: 75rem;
+            height: 20rem;
+            top: initial;
+          }
+        }
+      }
+    }
+    &-content {
+      @include flex(wrap);
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      position: relative;
+      height: 30rem;
+      width: 22rem;
+      @include mq (md) {
+        height: 40rem;
+        width: 100%;
+        max-width: 80%;
+      }
+      @include mq (xlg) {
+        width: 80%;
+        max-width: 160rem;
+      }
+      .views {
+        &-row {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          width: 100%;
+          @include mq (md) {
+            width: 25%;
+            padding: 1%;
+          }
+          .views-field {
+            &-user-picture {
+              img {
+                border-radius: 50%;
+                overflow: hidden;
+                height: 15rem;
+                width: 15rem;
+                object-fit: cover;
+              }
+            }
+            &-name {
+              color: $text-black;
+              font-size: 2rem;
+              font-family: $BCNovaticaCYR;
+              font-weight: 500;
+              width: auto;
+              height: auto;
+              margin: 1rem 0 0;
+              text-align: center;
+              position: relative;
+              &::after {
+                @include pseudo();
+                background-color: $orange;
+                width: 5rem;
+                height: .2rem;
+                left: 0;
+                right: 0;
+                margin: auto;
+                bottom: -1.2rem;
+              }
+            }
+            &-field-redes {
+              margin: 2rem 0 0;
+              .field__label {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      .flickity {
+        &-prev-next-button {
+          &.previous {
+            left: -4rem;
+            @include mq (md) {
+                left: -5.5rem;
+            }
+          }
+          &.next {
+            right: -4rem;
+            @include mq (md) {
+              right: -5.5rem;
+            }
+          }
+        }
+      }
+    }
+    &-footer {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      &::before {
+        @include pseudo();
+        background-color: $green;
+        width: 100%;
+        height: 100%;
+      }
+      &__content{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 2rem 3rem;
+        height: auto;
+        z-index: 1;
+        width: 100%;
+        @include mq (md) {
+          padding: 3.5rem 0;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        @include mq (lg) {
+          width: 100%;
+          max-width: 75%;
+        }
+        p {
+          color: $green-light;
+          font-family: $FranklinGothicATF;
+          font-size: 1.8rem;
+          text-align: center;
+          padding: 0 2rem;
+          line-height: 1.4;
+          margin: 0 0 1rem;
+          @include mq (md) {
+            margin: initial;
+            font-size: 2rem;   
+          }
+        }
+      }
+      &__link {
+        background-color: $green-light;
+        border-radius: 1.5rem;
+        border: .1rem solid $green-light;
+        color: $green;
+        font-size: 1rem;
+        font-family: $BCNovaticaCYR;
+        font-weight: bold;
+        letter-spacing: .1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: .8rem 2rem;
+        &:hover {
+          color: $green-light;
+          background-color: transparent;
+          border: .1rem solid $green-light;
+        }
+      }
+    }
+  }
+}

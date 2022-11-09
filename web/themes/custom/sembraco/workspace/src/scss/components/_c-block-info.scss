@@ -1,0 +1,147 @@
+.block-info {
+  margin: auto;
+  @include mq (sm) {
+    margin: 0 auto 5rem;
+  }
+  @include mq (md) {
+    width: 100%;
+    max-width: 82%;
+  }
+  @include mq (xlg) {
+    width: 82%;
+    max-width: 160rem;
+  }
+  &:first-child {
+    .content {
+      &__wrapper--imagen {
+        order: 2;
+        display: flex;
+        justify-content: end;
+      }
+      &__wrapper--info {
+        order: 1;
+        @include mq (md) {
+          padding: 0 3rem 0 0;
+        }
+        @include mq (lg) {
+          padding: 0;
+        }
+      }
+    }
+  }
+  &:nth-child(2) {
+    .content {
+      &__wrapper--imagen {
+        order: 2;
+        @include mq (md) {
+          order: 1;
+        }
+      }
+      &__wrapper--info {
+        order: 1;
+        @include mq (md) {
+          order: 2;
+          padding: 0 0 0 3rem;
+        }
+        @include mq (xlg) {
+          padding: 0;
+        }
+      }
+    }
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem 0 1rem;
+    margin: auto;
+    width: 85%;
+    @include mq (md) {
+      flex-direction: row;
+      width: 100%;
+      padding: 0;
+    }
+    &__wrapper {
+      &--imagen {
+        @include mq (md) {
+          width: 50%;
+        }
+        .field {
+          &--type-image {
+            margin: 0;
+            img {
+              border-radius: 20px;
+              overflow: hidden;
+            }
+          }
+        }
+      }
+      &--info {
+        @include mq (md) {
+          // width: 50%;
+          width: 48rem
+        }
+        .field--name {
+          &-field-title {
+            color: $green;
+            font-family: $BCNovaticaCYR;
+            font-size: 3rem;
+            font-weight: 600;
+            position: relative;
+            text-align: left;
+            @include mq (md) {
+              font-size: 4rem;
+            }
+            &::after {
+              @include pseudo();
+              background-color: $green;
+              width: 6rem;
+              height: .2rem;
+              bottom: -1.5rem;
+              @include mq (md) {
+                width: 8rem;  
+              }
+            }
+          }
+          &-body {
+            p {
+              text-align: left;
+              font-family: $FranklinGothicATF;
+              font-size: 1.5rem;
+              letter-spacing: 0.4px;
+              color: $text-black;
+              line-height: 2;
+              padding: 3rem 0 1rem;
+              @include mq (md) {
+                padding: 4rem 0 2rem; 
+              }
+            }
+          }
+          &-field-link a {
+            @extend %button-custom;
+            margin: 2rem 0 3rem;
+            padding: 0.2rem 1.8rem;
+            @include mq (md) {
+              padding: .4rem 3rem;
+            }
+            &:hover {
+              background-color: $green;
+              border: .1rem solid $green;
+              color: $green-light;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  &.about-us {
+    .block-info {
+      .field--name-field-link {
+        display: none;
+      }
+    }
+  }
+}

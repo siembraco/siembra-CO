@@ -1,0 +1,140 @@
+.view-que-hacemos-paso-a-paso {
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 24rem;
+  z-index: 1;
+  @include mq (md) {
+    width: 100%;
+  }
+  .views {
+    &-field {
+      .field-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $whitea;
+        border-radius: 2rem;
+        height: 100%;
+        padding: 4rem 0 3rem;
+        -webkit-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.15); 
+        box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.15);
+        @include mq (md) {
+          margin: auto;
+          width: 100%;
+          max-width: 80%;
+          height: 34rem;
+        }
+        @include mq (xlg) {
+          width: 80%;
+          max-width: 160rem;
+        }
+        .paragraph {
+          &--type--que-hacemos-paso-a-paso,
+          &--type--beneficio {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 7%;
+            @include mq (md) {
+              width: 33.3%;
+              padding: 0 2.5%;
+            }
+            .field {
+              &--type-image {
+                margin: 0;
+              }
+              &--name-field-grafica {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $cream;
+                border: .3rem solid $orange;
+                border-radius: 8rem;
+                padding: 2.8rem;
+                width: 12rem;
+                height: 12rem;
+              }
+              &--name-field-titulo {
+                color: $blacks;
+                font-family: $BCNovaticaCYR;
+                font-weight: 500;
+                font-size: 2rem;
+                height: 4rem;
+                position: relative;
+                text-align: center;
+                width: auto;
+                height: auto;
+                &::after {
+                  @include pseudo();
+                  background-color: $orange;
+                  width: 5rem;
+                  height: .2rem;
+                  left: 0;
+                  right: 0;
+                  margin: auto;
+                  bottom: -1.2rem;
+                }
+              }
+              &--name-field-descripcion {
+                font-family: $FranklinGothicATF;
+                font-size: 1.3rem;
+                text-align: center;
+                margin: 2rem 0 0;
+              }
+            }
+          }
+        }
+        .flickity {
+          &-prev-next-button {
+            &.previous {
+              left: -4rem;
+              @include mq (md) {
+                 left: -5.5rem;
+              }
+            }
+            &.next {
+              right: -4rem;
+              @include mq (md) {
+                right: -5.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.path-frontpage {
+  .view-que-hacemos-paso-a-paso {
+    position: relative;
+    bottom: 4rem;
+    @include mq (md) {
+      position: absolute;
+      bottom: -25rem;
+    }
+  }
+}
+
+.about-us  {
+  .view-que-hacemos-paso-a-paso {
+    position: relative;
+    top: -6rem;
+    @include mq (md) {
+      top: -8rem;
+    }
+  }
+}
+
+.farmers {
+  .view-que-hacemos-paso-a-paso {
+    .views-field {
+      .field-content {
+        margin: 2rem auto 6rem;
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+services:
+  plugin.manager.payu_item:
+    class: Drupal\commerce_payu_webcheckout_siembraco\Plugin\PayuItemManager
+    parent: default_plugin_manager
+  access.check_payu_signature:
+    class: Drupal\commerce_payu_webcheckout_siembraco\Access\CheckSignature
+    arguments: ['@entity.manager']
+    tags:
+      - { name: access_check, applies_to: _check_payu_signature, needs_incoming_request: TRUE }
+  access.disable_return_payu:
+    class: Drupal\commerce_payu_webcheckout_siembraco\Access\DisableReturn
+    tags:
+      - { name: access_check, applies_to: _disable_return_for_payu, needs_incoming_request: TRUE }
+  payu.currency_formatter:
+    class: Drupal\commerce_payu_webcheckout_siembraco\PayuCurrencyFormatter
+    arguments: ['@commerce_price.number_formatter']
+  payu.payment_parser:
+    class: Drupal\commerce_payu_webcheckout_siembraco\PaymentParser
+    arguments: ['@request_stack', '@plugin.manager.payu_item']
+  payu_hash_presave_event.subscriber:
+    class: Drupal\commerce_payu_webcheckout_siembraco\EventSubscriber\HashPresaveEventSubscriber
+    arguments: ['@token', '@payu.currency_formatter', '@request_stack']
+    tags:
+      - { name: event_subscriber }
+  payu.route_subscriber:
+    class: Drupal\commerce_payu_webcheckout_siembraco\EventSubscriber\RouteSubscriber
+    tags:
+      - { name: event_subscriber}

@@ -1,0 +1,58 @@
+.block-mision-vision {
+  &__one,
+  &__two {
+    margin: 1rem auto 4rem;
+    width: 85%;
+    @include mq (md) {
+      margin: 0 auto 8rem;
+      width: 100%;
+      max-width: 80%;
+    }
+    @include mq (xlg) {
+      width: 80%;
+      max-width: 160rem;
+    }
+    .field {
+      &--type-text-with-summary {
+        h2 {
+          color: $green;
+          font-size: 3rem;
+          font-family: $BCNovaticaCYR;
+          font-weight: 600;
+          display: block;
+          margin: 2rem 0 4rem;
+          position: relative;
+          @include mq (md) {
+            font-size: 4rem;
+          }
+          &:after {
+            @include pseudo();
+            background-color: $orange;
+            width: 6rem;
+            height: .2rem;
+            bottom: -1.5rem;
+            @include mq (md) {
+              width: 8rem;
+            }
+          }
+        }
+        p {
+          font-family: $FranklinGothicATF;
+          font-size: 1.5rem;
+          letter-spacing: 0.4px;
+          line-height: 2;
+        }
+      }
+    }
+  }
+  &__one {
+    @include mq (md) {
+      padding: 0 0 0 7%;
+    }
+  }
+  &__two {
+    @include mq (md) {
+      padding: 0 7% 0 0;
+    }
+  }
+}

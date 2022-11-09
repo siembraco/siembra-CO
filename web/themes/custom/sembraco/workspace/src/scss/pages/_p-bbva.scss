@@ -1,0 +1,212 @@
+body {
+  &.bbva {
+    background-color: #177755;
+    form.webform-submission-bbva-form {
+      max-width: 90rem;
+      margin: 3rem auto;
+      border-radius: 12px;
+    }
+    #content
+      > section
+      > article
+      > div
+      > div:nth-child(4)
+      > div
+      > div.block.block-layout-builder.block-inline-blockbasic
+      > div
+      > div.content__wrapper--info
+      > div
+      > p {
+      max-width: 90rem;
+      margin: 0 auto;
+    }
+    .main-content {
+      background-image: url("../assets/images/bg/trama-fondo.jpg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      padding: 2rem;
+      position: relative;
+      @include mq(md) {
+        padding: 2rem 0;
+        background-repeat: repeat;
+      }
+      &::after {
+        @include mq(md) {
+          @include pseudo();
+          width: 17rem;
+          height: 100%;
+          background-image: url("../assets/images/bg/back-leaf.png");
+          background-repeat: repeat-y;
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+    .node__content {
+      margin: 0;
+      .layout {
+        margin: auto;
+        max-width: 160rem;
+        position: relative;
+        &--onecol {
+          &:nth-child(2) {
+            .layout__region {
+              &--content {
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                align-items: center;
+                background-color: $whiteb;
+                padding: 3rem 0;
+                @include mq(md) {
+                  flex-direction: row;
+                }
+                @include mq(lg) {
+                  padding: 3rem 5rem 3rem 3rem;
+                }
+              }
+            }
+          }
+        }
+        &--twocol-section {
+          @include mq(sm) {
+            flex-direction: column;
+          }
+          @include mq(md) {
+            flex-direction: row;
+          }
+        }
+      }
+      .block-field-blocknodepagebody {
+        max-width: 90rem;
+        margin: 2rem auto;
+        p {
+          line-height: 1.5;
+          text-align: center;
+          img {
+            margin: 0 0 4rem;
+          }
+        }
+      }
+      .content__wrapper {
+        &--info {
+          p {
+            line-height: 1.5;
+            text-align: center;
+          }
+        }
+      }
+      .view-landings {
+        .view-content {
+          .views {
+            &-row {
+            }
+            &-field {
+              &-title {
+                text-align: center;
+                color: #177755;
+                font-family: "BC Novatica CYR";
+                font-weight: 500;
+                font-size: 2rem;
+                padding: 2rem 0;
+                position: relative;
+                width: auto;
+                @include mq(md) {
+                  font-size: 4rem;
+                }
+              }
+              &-field-ilustracion- {
+                max-width: 40rem;
+                width: 90%;
+                margin: 0 auto;
+              }
+              &-body {
+                width: 90rem;
+                margin: 0 auto;
+                p {
+                  line-height: 1.5;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+      .field {
+        &--name-field-tabla {
+          background-color: $green-light;
+          border: 0.1rem solid $green;
+          border-radius: 1.2rem;
+          padding: 1.5rem;
+          width: 100%;
+          margin: 3rem 0;
+          @include mq(md) {
+            width: 45rem;
+          }
+        }
+        &--name-field-media-image {
+          float: none;
+        }
+        &--name-body {
+          /*    width: 90rem;
+          margin: 0 auto; */
+        }
+      }
+      .views {
+        &-field-field-tabla {
+          background-color: $green-light;
+          border: 0.1rem solid $green;
+          border-radius: 1.2rem;
+          padding: 1.5rem;
+          width: 100%;
+          @include mq(md) {
+            width: 45rem;
+            margin: 8rem auto;
+          }
+        }
+      }
+      .list-group-item {
+        background-color: initial;
+        border: initial;
+        .paragraph {
+          &--type--especificacion {
+            display: flex;
+            flex-direction: column;
+            font-family: $FranklinGothicATF;
+            font-size: 1.3rem;
+            @include mq(md) {
+              flex-direction: row;
+            }
+            .field {
+              &--name-field-key {
+                font-weight: 500;
+                position: relative;
+                @include mq(md) {
+                  width: 70%;
+                }
+                &:after {
+                  @include mq(md) {
+                    @include pseudo();
+                    background-color: $green;
+                    width: 0.1rem;
+                    height: 100%;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    margin: auto;
+                  }
+                }
+              }
+              &--name-field-descripcion-table {
+                @include mq(md) {
+                  padding: 0 0 0 3rem;
+                  width: 30%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

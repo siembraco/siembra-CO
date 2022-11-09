@@ -1,0 +1,116 @@
+// // Font faces
+// //
+// // Instead of relying on the fonts that are available on a user's computer, you
+// // can use web fonts which, like images, are resources downloaded to the user's
+// // browser. Because of the bandwidth and rendering resources required, web fonts
+// // should be used with care.
+// //
+// // Numerous resources for web fonts can be found on Google. Here are a few
+// // websites where you can find Open Source fonts to download:
+// // - http://www.fontsquirrel.com/fontface
+// // - http://www.theleagueofmoveabletype.com
+// //
+// // In order to use these fonts, you will need to convert them into formats
+// // suitable for web fonts. We recommend the free-to-use Font Squirrel's
+// // Font-Face Generator:
+// //   http://www.fontsquirrel.com/fontface/generator
+// //
+// // The following is an example @font-face declaration. This font can then be
+// // used in any ruleset using a property like this:  font-family: Example, serif;
+// //
+// // Since we're using Sass, you'll need to declare your font faces here, then you
+// // can add them to the font variables in the _init.scss partial.
+
+$fonts: '../assets/fonts' !default;
+  
+@font-face {
+  font-family: 'Franklin Gothic ATF';
+  src: url('#{$fonts}/FranklinGothicATF-Regular.eot');
+  src: url('#{$fonts}/FranklinGothicATF-Regular.eot?#iefix') format('embedded-opentype'),
+      url('#{$fonts}/FranklinGothicATF-Regular.woff2') format('woff2'),
+      url('#{$fonts}/FranklinGothicATF-Regular.woff') format('woff'),
+      url('#{$fonts}/FranklinGothicATF-Regular.ttf') format('truetype'),
+      url('#{$fonts}/FranklinGothicATF-Regular.svg#FranklinGothicATF-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Franklin Gothic ATF';
+  src: url('#{$fonts}/FranklinGothicATF-Light.eot');
+  src: url('#{$fonts}/FranklinGothicATF-Light.eot?#iefix') format('embedded-opentype'),
+      url('#{$fonts}/FranklinGothicATF-Light.woff2') format('woff2'),
+      url('#{$fonts}/FranklinGothicATF-Light.woff') format('woff'),
+      url('#{$fonts}/FranklinGothicATF-Light.ttf') format('truetype'),
+      url('#{$fonts}/FranklinGothicATF-Light.svg#FranklinGothicATF-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Franklin Gothic ATF';
+  src: url('#{$fonts}/FranklinGothicATF-Medium.eot');
+  src: url('#{$fonts}/FranklinGothicATF-Medium.eot?#iefix') format('embedded-opentype'),
+      url('#{$fonts}/FranklinGothicATF-Medium.woff2') format('woff2'),
+      url('#{$fonts}/FranklinGothicATF-Medium.woff') format('woff'),
+      url('#{$fonts}/FranklinGothicATF-Medium.ttf') format('truetype'),
+      url('#{$fonts}/FranklinGothicATF-Medium.svg#FranklinGothicATF-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BC Novatica CYR';
+  src: url('#{$fonts}/BCNovaticaCYR-Medium.eot');
+  src: url('#{$fonts}/BCNovaticaCYR-Medium.eot?#iefix') format('embedded-opentype'),
+      url('#{$fonts}/BCNovaticaCYR-Medium.woff2') format('woff2'),
+      url('#{$fonts}/BCNovaticaCYR-Medium.woff') format('woff'),
+      url('#{$fonts}/BCNovaticaCYR-Medium.ttf') format('truetype'),
+      url('#{$fonts}/BCNovaticaCYR-Medium.svg#BCNovaticaCYR-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BC Novatica CYR';
+  src: url('#{$fonts}/BCNovaticaCYR-Regular.eot');
+  src: url('#{$fonts}/BCNovaticaCYR-Regular.eot?#iefix') format('embedded-opentype'),
+      url('#{$fonts}/BCNovaticaCYR-Regular.woff2') format('woff2'),
+      url('#{$fonts}/BCNovaticaCYR-Regular.woff') format('woff'),
+      url('#{$fonts}/BCNovaticaCYR-Regular.ttf') format('truetype'),
+      url('#{$fonts}/BCNovaticaCYR-Regular.svg#BCNovaticaCYR-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BC Novatica CYR';
+  src: url('#{$fonts}/BCNovaticaCYR-Bold.eot');
+  src: url('#{$fonts}/BCNovaticaCYR-Bold.eot?#iefix') format('embedded-opentype'),
+      url('#{$fonts}/BCNovaticaCYR-Bold.woff2') format('woff2'),
+      url('#{$fonts}/BCNovaticaCYR-Bold.woff') format('woff'),
+      url('#{$fonts}/BCNovaticaCYR-Bold.ttf') format('truetype'),
+      url('#{$fonts}/BCNovaticaCYR-Bold.svg#BCNovaticaCYR-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BC Novatica CYR';
+  src: url('#{$fonts}/BCNovaticaCYR-SemiBold.eot');
+  src: url('#{$fonts}/BCNovaticaCYR-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('#{$fonts}/BCNovaticaCYR-SemiBold.woff2') format('woff2'),
+      url('#{$fonts}/BCNovaticaCYR-SemiBold.woff') format('woff'),
+      url('#{$fonts}/BCNovaticaCYR-SemiBold.ttf') format('truetype'),
+      url('#{$fonts}/BCNovaticaCYR-SemiBold.svg#BCNovaticaCYR-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+

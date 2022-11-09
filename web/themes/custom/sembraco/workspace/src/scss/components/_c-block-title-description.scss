@@ -1,0 +1,44 @@
+.block {
+  &-title-description {
+    margin: auto;
+    padding: 4rem 0;
+    text-align: center;
+    width: 80%;
+    @include mq (md) {
+      width: 100%;
+      max-width: 80%;
+      padding: 8rem 0 1rem;
+    }
+    @include mq (xlg) {
+      width: 80%;
+      max-width: 160rem;
+    }
+    .content {
+      &__wrapper--info {
+        h2 {
+          color: $green;
+          font-size: 3rem;
+          font-family: $BCNovaticaCYR;
+          font-weight: 600;
+          margin: 0 auto 2rem;
+          position: relative;
+          width: auto;
+          @include mq (md) {
+            font-size: 4rem;
+            width: max-content;
+          }
+          &:after {
+            @include pseudo();
+            background-color: $green;
+            width: 90%;
+            height: .2rem;
+            left: 0;
+            right: 0;
+            margin: auto;
+            bottom: -1.2rem;
+          }
+        }
+      }
+    }
+  }
+}

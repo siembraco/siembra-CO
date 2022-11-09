@@ -1,0 +1,107 @@
+form {
+  &.webform-submission-contact-form {
+    background-image: url("../assets/images/bg/trama-fondo.jpg");
+    background-position: center;
+    background-size: 10rem;
+    margin: auto;
+    position: relative;
+    @include mq(md) {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    [data-drupal-selector="edit-flexbox"] {
+      padding: 4rem 3rem;
+      margin: 0;
+      @include mq(md) {
+        padding: 12rem 0;
+        width: 100%;
+        max-width: 85%;
+      }
+      .webform-flex {
+        &--1 {
+          &:first-child {
+            margin: 0 0 3rem;
+            @include mq(md) {
+              margin: 0;
+            }
+            h2 {
+              color: $green;
+              font-size: 3rem;
+              font-family: $BCNovaticaCYR;
+              font-weight: 600;
+              line-height: 1.2;
+              margin: 0 0 4rem;
+              text-align: center;
+              position: relative;
+              @include mq(md) {
+                font-size: 4rem;
+                text-align: left;
+              }
+              &:after {
+                @include pseudo();
+                background-color: $green;
+                width: 100%;
+                height: 0.1rem;
+                bottom: -1.5rem;
+              }
+            }
+            p {
+              display: block;
+              color: $text-black;
+              font-family: $FranklinGothicATF;
+              font-size: 1.5rem;
+            }
+            .js-form-item-acepto-terminos {
+              @include mq(md) {
+                display: block;
+                margin: 0 0 0 auto;
+                width: auto;
+              }
+              @include mq(md) {
+                width: max-content;
+                max-width: 90%;
+                margin: 0;
+              }
+              label {
+                margin: 0;
+                position: relative;
+                top: 0.2rem;
+              }
+            }
+          }
+          &:last-child {
+            text-align: center;
+          }
+        }
+      }
+      [data-drupal-selector="edit-flex-wrapper"] {
+        .webform-flex {
+          &--1 {
+            .webform-flex--container {
+              text-align: left;
+            }
+            &:first-child {
+              .webform-flex {
+                &--container {
+                  @include mq(sm) {
+                    margin: 0 0.8rem 0 0;
+                  }
+                }
+              }
+            }
+            &:last-child {
+              .webform-flex {
+                &--container {
+                  @include mq(sm) {
+                    margin: 0 0 0 0.8rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

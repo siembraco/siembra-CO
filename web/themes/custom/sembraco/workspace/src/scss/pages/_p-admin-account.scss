@@ -1,0 +1,351 @@
+body {
+  &.path-administrar-cuenta {
+    .main-content {
+      margin: 6rem auto 8rem;
+      min-height: 110vh;
+      @include mq (md) {
+        width: 90%;
+        max-width: 130rem;
+      }
+      .section {
+        display: flex;
+        flex-direction: column;
+        padding: 7%;
+        @include mq (sm) {
+          padding: 7% 25%;
+        }
+        @include mq (md) {
+          flex-direction: row;
+          padding: 0 5%;
+        }
+        @include mq (lg) {
+          padding: 0 7%;
+        }
+        .account-card {
+          &.card {
+            display: flex;
+            align-items: center;
+            border-radius: 1.5rem;
+            padding: 3rem;
+            -webkit-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.15); 
+            box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.15);
+            text-align: center;
+            @include mq (md) {
+              border: 0;
+              position: absolute;
+              width: 32rem;
+            }
+            .card {
+              &-img-top {
+                display: flex;
+                justify-content: center;
+                width: 12rem;
+                height: 12rem;
+                object-fit: cover;
+                border-radius: 10rem;
+              }
+              &-body {
+                color: $orange;
+                font-family: $FranklinGothicATF;
+                text-align: center;
+              }
+              &-title {
+                font-weight: 700;
+                font-size: 1.6rem;
+                text-transform: uppercase;
+                width: auto;
+              }
+              &-text {
+                font-weight: 500;
+              }
+            }
+          }
+        }
+        .nav {
+          &.nav-tabs {
+            background-color: $white;
+            background-image: url('../assets/images/bg/pay.jpeg');
+            background-position: center bottom 3rem;
+            background-repeat: no-repeat;
+            background-size: 80%;
+            border-radius: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 0 8rem;            
+            margin: 4rem 0;
+            -webkit-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.15); 
+            box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.15);
+            @include mq (md) {
+              margin: initial;
+              padding: 2rem 0 8rem;
+              position: absolute;
+              top: 44rem;
+              width: 32rem;
+            }
+            .nav {
+              &-item {
+                padding: 1rem 0 1rem 6rem;
+                .nav {
+                  &-link {
+                    border: 0;
+                    border-radius: 0;
+                    color: $green;
+                    font-family: $FranklinGothicATF;
+                    font-weight: 500;
+                    padding: 0;
+                    position: relative;
+                    &::before {
+                      @include pseudo();
+                      background-repeat: no-repeat;
+                      background-position: center;
+                      width: 1.8rem;
+                      height: 1.8rem;
+                      left: -2.5rem;
+                      top: 50%;
+                      bottom: 50%;
+                      margin: auto;
+                    }
+                    &:hover {
+                      color: $orange;
+                    }
+                    &.active {
+                      color: $orange;
+                    }
+                    &--account {
+                      &::before {
+                        background-image: url('../assets/images/icons/icon-accoun-green.svg');
+                      }
+                      &:hover {
+                        &::before {
+                          background-image: url('../assets/images/icons/icon-accoun-orange.svg');
+                        }
+                      }
+                      &.active {
+                        &::before {
+                          background-image: url('../assets/images/icons/icon-accoun-orange.svg');
+                        }
+                      }
+                    }
+                    &--orders {
+                      &::before {
+                        background-image: url('../assets/images/icons/icon-orders-green.svg');
+                      }
+                      &:hover {
+                        &::before {
+                          background-image: url('../assets/images/icons/icon-orders-orange.svg');
+                        }
+                      }
+                      &.active {
+                        &::before {
+                          background-image: url('../assets/images/icons/icon-orders-orange.svg');
+                        }
+                      }
+                    }
+                    &--data {
+                      &::before {
+                        background-image: url('../assets/images/icons/icon-data-green.svg');
+                      }
+                      &:hover {
+                        &::before {
+                          background-image: url('../assets/images/icons/icon-data-orange.svg');
+                        }
+                      }
+                      &.active {
+                        &::before {
+                          background-image: url('../assets/images/icons/icon-data-orange.svg');
+                        }
+                      }
+                    }
+                    &--terms {
+                      &::before {
+                        background-image: url('../assets/images/icons/icon-terms-green.svg');
+                      }
+                      &:hover {
+                        &::before {
+                          background-image: url('../assets/images/icons/icon-terms-orange.svg');
+                        }
+                      }
+                      &.active {
+                        &::before {
+                          background-image: url('../assets/images/icons/icon-terms-orange.svg');
+                        }
+                      }
+                    }
+                    &--policies {
+                      &::before {
+                        background-image: url('../assets/images/icons/icon-policies-green.svg');
+                      }
+                      &:hover {
+                        &::before {
+                          background-image: url('../assets/images/icons/icon-policies-orange.svg');
+                        }
+                      }
+                      &.active {
+                        &::before {
+                          background-image: url('../assets/images/icons/icon-policies-orange.svg');
+                        }
+                      }
+                    }
+                    &--out {
+                      &::before {
+                        background-image: url('../assets/images/icons/icon-out-green.svg');
+                      }
+                      &:hover {
+                        &::before {
+                          background-image: url('../assets/images/icons/icon-out-orange.svg');
+                        }
+                      }
+                      &.active {
+                        &::before {
+                          background-image: url('../assets/images/icons/icon-out-orange.svg');
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .tab-content {
+          border-radius: 1.5rem;
+          -webkit-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.15); 
+          box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.15);
+          padding: 5rem;
+          position: relative;
+          @include mq (md) {
+           left: 35rem;
+           width: 55%;
+          }
+          @include mq (lg) {
+            left: 38rem;
+            width: 65%;
+          }
+          .tab-pane {
+            color: $green;
+            font-family: $FranklinGothicATF;
+            font-size: 1.3rem;
+            h3 {
+              color: $green;
+              font-family: $FranklinGothicATF;
+              font-size: 2rem;
+              font-weight: 600;
+              margin: 0 0 5rem;
+              text-transform: uppercase;
+              position: relative;
+              &::after {
+                @include pseudo();
+                background-color: $orange;
+                width: 5rem;
+                height: .1rem;
+                bottom: -0.7rem;
+              }
+            }
+            .terms-body{
+              height: 41rem;
+              overflow-y: scroll;
+              padding-right: 2rem;
+            }
+            .address-book {
+              &--customer {
+
+              }
+              &__add-link {
+                color: $orange;
+                font-family: $FranklinGothicATF;
+                font-size: 1.3rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                text-decoration: underline;
+              }
+              &__empty-text {
+                color: $green;
+                font-family: $FranklinGothicATF;
+                font-size: 1.3rem;
+              }
+            }
+            #conditions {
+              @include mq (md) {
+
+              }
+            }
+            .terms-form {
+              display: block;
+              margin: 3rem 0 0;
+            }
+            form {
+              label {
+                color: $green;
+                &.form-check-label {
+                  padding-left: .5rem;
+                  margin: 0;
+                }
+              }
+              input,
+              select {
+                background-color: $green-light;
+                border: .1rem solid $border;
+                border-radius: 1.2rem;
+                color: $text-black;
+                font-family: $FranklinGothicATF;
+                font-size: 1.5rem;
+                height: 3.5rem;
+                width: 100%;
+              }
+              input[type="checkbox"] {
+                border-radius: .3rem;
+                width: 2rem;
+                height: 2rem;
+                border: .2rem solid $green;
+              }
+              .confirm-parent, 
+              .password-parent {
+                max-width: 100%;
+              }
+              .description {
+                font-family: $FranklinGothicATF;
+                font-size: 1.3rem;
+                a {
+                  color: $orange;
+                  font-weight: 500;
+                }
+              }
+              .password-strength {
+                font-size: 1.2rem;
+                &__title {
+                  color: $orange;
+                  font-family: $FranklinGothicATF;
+                  font-weight: 500;
+                }
+                &__text {
+                  font-weight: 700;
+                }
+              }
+              .password-suggestions {
+                color: $orange;
+                border-radius: 1.2rem;
+                border: .1rem solid $orange;
+                font-family: $FranklinGothicATF;
+                font-size: 1.3rem;
+                font-weight: 700;
+                padding: 2rem;
+                li {
+                  color: $orange;
+                  font-family: $FranklinGothicATF;
+                  font-size: 1.2rem;
+                  font-weight: 500;
+                }
+              }
+              .password-confirm-message {
+                color: $orange;
+                font-family: $FranklinGothicATF;
+                font-size: 1.2rem;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

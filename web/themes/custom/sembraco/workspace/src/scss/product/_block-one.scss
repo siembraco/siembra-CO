@@ -1,0 +1,90 @@
+body {
+  &.path-product {
+    .product__wrapper {
+      &--one {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        @include mq(md) {
+          flex-direction: row;
+        }
+        .field {
+          &--name-body {
+            @include mq(md) {
+              width: 33.3%;
+              transform: translateX(-200%);
+              transition: all 0.7s;
+            }
+            p {
+              font-family: $FranklinGothicATF;
+              line-height: 1.5;
+            }
+            &.animation-siembraco {
+              transform: translateX(0);
+            }
+          }
+          &--name-field-ilustracion- {
+            display: flex;
+            justify-content: center;
+            img {
+              width: 30rem;
+              height: 30rem;
+              object-fit: contain;
+              transition: all 1.3s;
+              @include mq(md) {
+                opacity: 0;
+                transform: scale(4);
+              }
+              &.animation-siembraco {
+                left: 10rem;
+                right: 0;
+                margin: auto;
+                transition: all 1s;
+                @include mq(md) {
+                  opacity: 1;
+                  transform: scale(1);
+                  position: fixed;
+                  top: 55%;
+                }
+                &.animation-siembraco-stop {
+                  opacity: 0;
+                  transition: all 1s;
+                  height: 0;
+                }
+              }
+            }
+            @include mq(md) {
+              width: 33.3%;
+            }
+          }
+          &--name-variations {
+            margin-top: 2rem;
+            @include mq(md) {
+              margin-top: -10rem;
+            }
+          }
+          &--name-field-imagen-de-fondo {
+            display: none;
+            @include mq(md) {
+              display: block;
+              width: 33.3%;
+              position: absolute;
+              right: 0;
+              transform: translateX(100%);
+              transition: all 0.7s;
+              top: 29rem;
+              &.animation-siembraco {
+                transform: translateX(0);
+              }
+            }
+            img {
+              width: 100%;
+              height: auto;
+              opacity: 0.3;
+            }
+          }
+        }
+      }
+    }
+  }
+}

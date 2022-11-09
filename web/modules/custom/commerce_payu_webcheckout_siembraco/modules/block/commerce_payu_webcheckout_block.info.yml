@@ -1,0 +1,14 @@
+name: PayU Webcheckout Block siembraco
+type: module
+description: 'Creates a handy block that can be used for displaying PayU official images somewhere in the site.'
+package: Commerce
+# core: 8.x
+dependencies:
+  - commerce_payu_webcheckout_siembraco:commerce_payu_webcheckout_siembraco
+
+# Information added by Drupal.org packaging script on 2019-04-02
+version: '8.x-2.0-alpha1'
+core: '8.x'
+core_version_requirement: ^8 || ^9
+project: 'commerce_payu_webcheckout_siembraco'
+datestamp: 1554164888

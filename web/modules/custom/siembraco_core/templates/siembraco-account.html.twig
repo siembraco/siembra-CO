@@ -1,0 +1,59 @@
+<div class="account-card card">
+<img src="{{ data.user_image }}" class="card-img-top" alt="...">
+	<div class="card-body">
+		<h5 class="card-title">{{ data.user_name }}</h5>
+		<p class="card-text">{{ data.user_mail }}</p>
+	</div>
+</div>
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+	<li class="nav-item" role="presentation">
+		<button class="nav-link nav-link--account active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">{{ "Configurar mi cuenta"|t }}</button>
+	</li>
+	<li class="nav-item" role="presentation">
+		<button class="nav-link nav-link--orders" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">{{ "Mis Cultivos"|t }}</button>
+	</li>
+	<li class="nav-item" role="presentation">
+		<button class="nav-link nav-link--data" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">{{ "Datos de Facturación"|t }}</button>
+	</li>
+  <li class="nav-item" role="presentation">
+		<button class="nav-link nav-link--terms" id="contact-tab" data-bs-toggle="tab" data-bs-target="#conditions" type="button" role="tab" aria-controls="contact" aria-selected="false">{{ "Términos y Condiciones"|t }}</button>
+	</li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link nav-link--policies" href="{{ data.privacy_link }}" role="tab" target="_blank">{{ "Políticas de Privacidad"|t }}</a>
+	</li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link nav-link--out" href="/user/logout" role="tab">{{ "Cerrar Sesión"|t }}</a>
+	</li>
+</ul>
+
+<div class="tab-content" id="myTabContent">
+	<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <h3>{{ "INFORMACIÓN DE LA CUENTA"|t }}</h3>
+    {{ data.user_form }}
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <h3>{{ "MIS PEDIDOS"|t }}</h3>
+    {{ data.order_view }}
+  </div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+    <h3>{{ "DATOS DE FACTURACIÓN"|t }}</h3>
+    {{ data.billing_profiles }}
+  </div>
+  <div class="tab-pane fade" id="conditions" role="tabpanel" aria-labelledby="contact-tab">
+    <h3>{{ "TÉRMINOS Y CONDICIONES"|t }}</h3>
+    <div class="terms-body">
+      {{ data.terms_conditions | raw }}
+    </div>
+    <div class="terms-form">
+      {{ data.terms_conditions_form }}
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

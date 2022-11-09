@@ -1,0 +1,15 @@
+siembraco_core.account:
+  path: '/administrar-cuenta'
+  defaults:
+    _controller: '\Drupal\siembraco_core\Controller\AccountSiembracoController::account'
+    _title: 'Administar Cuenta'
+  requirements:
+    _permission: 'access content'
+
+siembraco_core.account_settings:
+  path: '/admin/config/siembraco/account/settings'
+  defaults:
+    _form: '\Drupal\siembraco_core\Form\SiembracoAccountSettings'
+    _title: 'Configuracion cuentas Siembraco'
+  requirements:
+    _permission: 'administer site configuration'

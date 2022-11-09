@@ -1,0 +1,122 @@
+body {
+  &.path-product {
+    .product__wrapper {
+      &--two {
+        position: relative;
+        margin: 5rem 0;
+        transition: all 1s;
+        transform: translateY(30rem);
+        @include mq(md) {
+          margin: 7rem 0;
+        }
+        &.animation-siembraco {
+          transform: translateX(0);
+        }
+        .field {
+          &--name-field-lista- {
+          }
+          &__item {
+            .paragraph {
+              &--type--caracteristicas- {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin: 0 0 1rem;
+                cursor: pointer;
+                @include mq(md) {
+                  flex-direction: row;
+                  margin: 0 0 3rem;
+                }
+              }
+              .field {
+                &--name-field-icono {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background-color: $cream;
+                  border: 0.3rem solid $orange;
+                  border-radius: 8rem;
+                  width: 8rem;
+                  height: 8rem;
+                  img {
+                    width: 3rem;
+                    height: auto;
+                  }
+                }
+                &--name-field-caracteristicas {
+                  color: $blacks;
+                  font-family: $BCNovaticaCYR;
+                  font-size: 2rem;
+                  font-weight: 600;
+                  padding: 0 0 3.5rem 2rem;
+                  position: relative;
+                  @include mq(md) {
+                    font-size: 2.2rem;
+                    width: auto;
+                  }
+                  &::after {
+                    @include pseudo();
+                    background-color: $orange;
+                    width: 6rem;
+                    height: 0.1rem;
+                    bottom: 1.5rem;
+                  }
+                  &:hover {
+                    color: $orange;
+                  }
+                }
+                &--name-field-descripcion-caracteristica {
+                  height: 0;
+                  overflow: hidden;
+                  opacity: 0;
+                  transition: all 0.5s ease-out;
+                  margin: 1rem 0;
+                  @include mq(md) {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    margin: initial;
+                    width: 35rem;
+                    padding: 6rem 0 0 0;
+                  }
+                  &:before {
+                    @include mq(md) {
+                      @include pseudo();
+                      content: "Características";
+                      color: $orange;
+                      font-family: $BCNovaticaCYR;
+                      font-size: 3rem;
+                      font-weight: 600;
+                      top: 0;
+                    }
+                  }
+                  &::after {
+                    @include mq(md) {
+                      @include pseudo();
+                      background-color: $orange;
+                      width: 8rem;
+                      height: 0.1rem;
+                      top: 4rem;
+                    }
+                  }
+                }
+              }
+            }
+            &.active-item-list {
+              .paragraph {
+                .field--name-field-caracteristicas {
+                  color: $orange;
+                }
+                .field--name-field-descripcion-caracteristica {
+                  height: 100%;
+                  opacity: 1;
+                  transition: all 0.5s ease-out;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

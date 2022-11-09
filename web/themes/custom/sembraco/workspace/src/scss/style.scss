@@ -1,0 +1,69 @@
+/**
+ * theme.scss
+ *
+ * These are the styles of theme .
+ *
+ * Index
+ * - Base
+ * - Components
+ */
+//@charset "UTF-8";
+// -- Bootstrap -- //
+@import "~bootstrap/scss/bootstrap";
+@import "~flickity/dist/flickity.min.css";
+// -- Base -- //
+@import "base/fonts.scss";
+@import "base/mixins";
+@import "base/variables";
+@import "base/general";
+@import "base/flickity";
+// -- Components -- //
+@import "components/c-block-banner-page";
+@import "components/c-block-bannerloginuser";
+@import "components/c-block-commerce-cart";
+@import "components/c-block-datosdecontacto";
+@import "components/c-block-mision-vision";
+@import "components/c-block-semilla";
+@import "components/c-block-social";
+@import "components/c-block-text";
+@import "components/c-block-title-description";
+@import "components/c-view-slider";
+@import "components/c-view--store--outstanding";
+@import "components/c-view-block-farmers";
+@import "components/c-view-commerce-cart-form";
+@import "components/c-view-commerce-user-orders";
+@import "components/c-buttom";
+@import "components/c-commerce-checkout-flow-multistep-default";
+@import "components/c-form-customer-adress";
+@import "components/c-forms";
+@import "components/c-maps";
+@import "components/c-pagination";
+@import "components/c-title";
+@import "components/c-block-info";
+@import "components/c-view-whatwedo";
+@import "components/c-views-benefits";
+@import "components/c-webform-submission-contact-form";
+@import "components/c-webform-submission-fammers-form";
+@import "components/c-menu--menu-login";
+// -- Layouts -- //
+@import "layout/l-header";
+@import "layout/l-footer";
+// -- Pages -- //
+@import "pages/p-aboutus";
+@import "pages/p-admin-account";
+@import "pages/p-contact";
+@import "pages/p-home";
+@import "pages/p-page-user";
+@import "pages/p-path-product";
+@import "pages/p-path-user";
+@import "pages/p-store";
+@import "pages/p-farmers";
+@import "pages/p-path-checkout";
+@import "pages/p-bbva";
+@import "pages/p-node--type-orders-aditional-info";
+// -- Product -- //
+@import "product/block-one";
+@import "product/block-two";
+@import "product/block-three";
+@import "product/block-four";
+

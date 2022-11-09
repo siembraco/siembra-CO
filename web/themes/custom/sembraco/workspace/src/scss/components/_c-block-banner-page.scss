@@ -1,0 +1,89 @@
+.banner {
+  position: relative;
+  .field {
+    &--type-entity-reference,
+    &--type-image {
+      margin: 0;
+    }
+    &--name-field-media-image,
+    &--name-field-imagen-page {
+      img {
+        width: 100%;
+        height: 30rem;
+        object-fit: cover;
+      }
+    }
+    &--name-body {
+      text-align: center;
+      .banner-title {
+        position: absolute;
+        color: $white;
+        font-family: $BCNovaticaCYR;
+        font-size: 3rem;
+        font-weight: 600;
+        margin: auto;
+        left: 0;
+        right: 0;
+        width: auto;
+        @include mq (md) {
+          font-size: 5rem;
+        }
+        // @include mq (lg) {
+        //   font-size: 8rem;
+        // }
+      }
+    }
+  }
+  &-template-one {
+    .content {
+      .field {
+        &--name-body {
+          .banner-title {
+            bottom: 20rem;
+          }
+          p {
+            font-size: 1.5rem;
+            padding: 0 2rem;
+            position: absolute;
+            bottom: 12rem;
+            color: $white;
+            left: 0;
+            right: 0;
+            @include mq (md) {
+              font-size: 2rem;
+              padding: 0;
+              bottom: 14rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-template-two {
+    .content {
+      .field {
+        &--name-body {
+          .banner-title {
+            bottom: 35%;
+            @include mq (md) {
+              bottom: 50%;
+            }
+            @include mq (lg) {
+              bottom: 35%;
+            }
+            &:after {
+              @include pseudo();
+              background-color: $white;
+              left: 0;
+              right: 0;
+              margin: auto;
+              width: 65%;
+              height: .1rem;
+              bottom: -1.5rem;
+            }
+          } 
+        }
+      }
+    } 
+  }
+}

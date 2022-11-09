@@ -1,0 +1,40 @@
+.flickity {
+  &-button {
+    background-color: $green-light;
+    border-radius: 5rem;
+    color: $green;
+    width: 3rem;
+    height: 3rem;
+    @include mq(md) {
+      width: 4rem;
+      height: 4rem;
+    }
+    &:hover {
+      background-color: $green;
+      color: $green-light;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  &-prev-next-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .flickity {
+      &-button-icon {
+        position: initial;
+      }
+    }
+    &.previous {
+      @include mq (md) {
+        left: -5.5rem;
+      }
+    }
+    &.next {
+      @include mq (md) {
+        right: -5.5rem;
+      }
+    }
+  }
+}

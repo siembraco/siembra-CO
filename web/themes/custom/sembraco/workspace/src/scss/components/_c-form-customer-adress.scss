@@ -1,0 +1,16 @@
+form {
+  &.profile-form {
+    padding: 5rem;
+    input,
+    select {
+      background-color: $green-light;
+      border: .1rem solid $border;
+      border-radius: 1.2rem;
+      color: $text-black;
+      font-family: $FranklinGothicATF;
+      font-size: 1.5rem;
+      height: 3.5rem;
+      width: 100%;
+    }
+  }
+}

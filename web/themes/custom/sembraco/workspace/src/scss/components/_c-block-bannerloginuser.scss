@@ -1,0 +1,107 @@
+#block-bannerloginuser {
+  position: relative;
+  margin: auto;
+  @include mq(xlg) {
+    max-width: 160rem;
+  }
+  .field {
+    &--type-entity-reference {
+      margin: 0;
+    }
+    &--name-field-imagen-page {
+      position: relative;
+      &::before {
+        @include pseudo();
+        background-color: #f9b12340;
+        width: 100%;
+        height: 100%;
+      }
+      img {
+        height: 20rem;
+        object-fit: cover;
+        @include mq(sm) {
+          height: auto;
+        }
+      }
+    }
+    &--name-body {
+      position: absolute;
+      top: 35%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: max-content;
+      @include mq(sm) {
+        top: 20%;
+      }
+      .body--title {
+        &__content {
+          text-align: center;
+        }
+        &__login,
+        &__register,
+        &__Forgotten {
+          color: $white;
+          font-family: $BCNovaticaCYR;
+          font-size: 3rem;
+          font-weight: 600;
+          position: relative;
+          @include mq(md) {
+            font-size: 6rem;
+          }
+          @include mq(lg) {
+            font-size: 10rem;
+          }
+          &:after {
+            @include pseudo();
+            background-color: $white;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 80%;
+            height: 0.1rem;
+            bottom: -1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  &.page-user-login {
+    #block-bannerloginuser {
+      .field {
+        &--name-body {
+          .body--title {
+            &__register {
+              display: none;
+            }
+            &__Forgotten {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  &.page-user-register {
+    #block-bannerloginuser {
+      .field {
+        &--name-body {
+          .body--title {
+            &__login {
+              display: none;
+            }
+            &__Forgotten {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

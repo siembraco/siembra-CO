@@ -1,0 +1,15 @@
+#block-semilla {
+  position: fixed;
+  bottom: 10rem;
+  right: 1rem;
+  width: max-content;
+  z-index: 1;
+  .content {
+    &__wrapper--imagen {
+
+    }
+    &__wrapper--info {
+      display: none;
+    }
+  }
+}
